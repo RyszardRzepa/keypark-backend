@@ -1,11 +1,10 @@
-const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const db = admin.firestore();
 /**
  * Receive data from pubsub, then
  * Maintain last device data on Firestore 'devices' collections
  */
-module.exports = functions.pubsub.topic('telemetry-topic').onPublish((message) => {
+module.exports = function (message) {
 
   //console.log(message);
   const attributes = message.attributes;
@@ -26,7 +25,7 @@ module.exports = functions.pubsub.topic('telemetry-topic').onPublish((message) =
   };
 
   return db.collection('devices').add(deviceId, data);
-});
+};
 
 /**
  * Maintain last status in Firestore
