@@ -58,7 +58,7 @@ function handleAuth(err, authClient) {
   const name = `projects/${PROJECT_ID}/locations/${REGION}/registries/${REGISTRY}/devices/${device_id}`;
 
   if (err) {
-    console.log(err);
+    return Error('error handleAuth');
   }
 
   if (authClient.createScopedRequired &&
@@ -74,8 +74,7 @@ function handleAuth(err, authClient) {
   };
   // Get device version
   var devices = cloudiot.projects.locations.registries.devices;
-  devices.get(request, (err, data) =>
-    handleDeviceGet(authClient, name, device_id, err, data));
+  return devices.get(request, (err, data) => handleDeviceGet(authClient, name, device_id, err, data));
 }
 
 /**
@@ -83,30 +82,20 @@ function handleAuth(err, authClient) {
  * call modifyCloudToDeviceConfig method of Cloud IoT Core
  * to update the device configuration.
  */
-module.exports = function (req, res) {
-
-  console.log(req.query.deviceId);
-  console.log(req.query.ledStatus);
-
-  let deviceId = req.query.deviceId;
-  let ledState = req.query.ledStatus;
+module.exports = function (deviceId, ledState) {
 
   console.log(deviceId);
   if (deviceId === null) {
-    res.json({ err: 'Param `deviceId` is required!' });
-    return;
+    return Error( 'Param `deviceId` is required!');
   }
 
   console.log(ledState);
   if (ledState === null) {
-    res.json({ err: 'Param `ledState` is required' });
-    return;
+    return Error( 'Param `ledState` is required!');
   }
 
   deviceState = ledState;
   deviceID = deviceId;
 
-  googleapis.auth.getApplicationDefault(handleAuth);
-
-  res.status(200).end();
+  return googleapis.auth.getApplicationDefault(handleAuth);
 };

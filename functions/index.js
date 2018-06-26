@@ -4,8 +4,8 @@ admin.initializeApp(functions.config().firebase);
 
 const OnUpdateLocks = require('./OnUpdateLocks');
 const ReceiveTelemetry = require('./ReceiveTelemetry');
-const UpdateDeviceConfig = require('./UpdateDeviceConfig');
+const OnKeyCreate = require('./OnKeysCreate');
 
-exports.updateDeviceConfig = functions.https.onRequest(UpdateDeviceConfig)
 exports.onUpdateLocks = functions.firestore.document('locks/{lockId}').onUpdate(OnUpdateLocks);
 exports.receiveTelemetry = functions.pubsub.topic('telemetry-topic').onPublish(ReceiveTelemetry);
+exports.onCreateKey = functions.firestore.document('keys/{keyId}').onCreate(OnKeyCreate);
