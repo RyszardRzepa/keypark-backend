@@ -4,7 +4,7 @@ const googleapis = new GoogleApis();
 const cloudiot = googleapis.cloudiot('v1');
 
 const PROJECT_ID = 'keypark-backend';
-const REGION = 'europe-central1';
+const REGION = 'europe-west1';
 const REGISTRY = 'asset-tracker-registry';
 
 const API_SCOPES = [

@@ -2,5 +2,5 @@
   "arch": "esp32",
   "platform": "esp32",
   "app_name": "firmware",
-  "build_time_ms": 14392
+  "build_time_ms": 17849
 }

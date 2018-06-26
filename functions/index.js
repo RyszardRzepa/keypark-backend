@@ -6,6 +6,6 @@ const OnUpdateLocks = require('./OnUpdateLocks');
 const ReceiveTelemetry = require('./ReceiveTelemetry');
 const UpdateDeviceConfig = require('./UpdateDeviceConfig');
 
-// exports.helloWorld = functions.https.onRequest()
+exports.updateDeviceConfig = functions.https.onRequest(UpdateDeviceConfig)
 exports.onUpdateLocks = functions.firestore.document('locks/{lockId}').onUpdate(OnUpdateLocks);
 exports.receiveTelemetry = functions.pubsub.topic('telemetry-topic').onPublish(ReceiveTelemetry);

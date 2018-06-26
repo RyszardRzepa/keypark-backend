@@ -10,7 +10,7 @@ load('api_esp32.js');
 let ON = 1;
 let OFF = 0;
 
-let led = 4;
+let led = 13;
 let ledIsOn = false;
 let isMqqtConnected = false;
 
