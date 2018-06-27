@@ -16,7 +16,7 @@ The box will use esp32 to controll the lock, send temperature data to the backen
 3) We will use google cloud functions for triggering the device config updates. We will only do 1 type of update to the devie. 
 We will ask device to open the lock or close the lock.
 4) The device will send data to firestore database about the temperature in the box. This will be a interval of 600sec.
-
+![alt text](https://storage.googleapis.com/gcp-community/tutorials/cloud-iot-firestore-config/architecture.png)
 
 ### What need to be done
 1) Think about the security in the first place!!!
