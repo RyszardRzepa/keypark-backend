@@ -28,4 +28,4 @@
 
 
 ### Run the following command to register this device on Cloud IoT Code. The command generates a public and a private key to be used for the communication, put the private key on the device, send the public key to Cloud IoT core and register the device, getting the deviceId from ESP. 
-- `mos gcp-iot-setup --gcp-project keypark-backend --gcp-region europe-west1 --gcp-registry telemetry-topic`
+- `mos gcp-iot-setup --gcp-project keypark-backend --gcp-region europe-west1 --gcp-registry asset-tracker-registry`
