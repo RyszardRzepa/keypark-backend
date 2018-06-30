@@ -1,0 +1,1 @@
+{"version":3,"file":"GlobalVariables.js","sourceRoot":"","sources":["../src/GlobalVariables.ts"],"names":[],"mappings":";;AAAA,2CAAsC;AAEtC,MAAM,KAAK,GAAG,OAAO,CAAC,gBAAgB,CAAC,CAAA;AAEvC,MAAM,UAAU,GAAG,IAAI,uBAAU,EAAE,CAAC;AACpC,MAAM,EAAE,GAAG,KAAK,CAAC,SAAS,EAAE,CAAC;AAC7B,MAAM,GAAG,GAAG;IACR,UAAU;IACV,EAAE;CACL,CAAC;AAEF,kBAAe,GAAG,CAAC"}
