@@ -1,7 +1,6 @@
 const UpdateDeviceConfig = require('./UpdateDeviceConfig');
 
 module.exports = function (change, context) {
-
   // if locked filed is updated updateDeviceConfig
   if (change.after.data().locked === change.before.data().locked) {
     return null;

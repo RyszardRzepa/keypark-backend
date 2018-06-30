@@ -1,12 +1,21 @@
 const admin = require('firebase-admin');
+const db = admin.firestore();
+// const twilio = require('./twilio');
 
 function createUser(phone_number) {
-  const db = admin.firestore();
-  admin.auth().createUser({ phoneNumber: phone_number, disabled: false })
-    .then(function (user) {
-      return db.collection('user').add({ phone_number, created: Date.now() })
+  return admin.auth().createUser({
+    email: phone_number + '@gmail.com',
+    password: phone_number + '@gmail.com',
+    phoneNumber: phone_number,
+    disabled: false,
+  })
+    .then((user) => {
+      const msg = 'Your package is ready to pickup. Use mobile app to open the module. https://www.wp.pl';
+      console.log('user created', user)
+     return  db.collection('users').doc(phone_number).set({ phone_number, created: Date.now() })
     })
-    .catch(function (err) {
+    .catch((err) => {
+      console.log('error createUser()', err)
       return err;
     })
 }
@@ -14,15 +23,17 @@ function createUser(phone_number) {
 module.exports = function (snap, context) {
   // check if phone number dont exist in invite property
   if (!snap.data().invite) {
+    console.log('no invite, snap.data()', snap.data())
     return null;
   }
   const phone_number = snap.data().invite;
-  admin.auth().getUserByPhoneNumber(phone_number)
-    .then(userRecord => {
-      if (!userRecord) {
-        // create new user in  auth and in 'users' collection
-        return createUser(phone_number);
-      }
-      // send sms to user about package info
-    }).catch(err => err)
+  return admin.auth().getUserByPhoneNumber(phone_number)
+    .then((userRecord) => {
+      const msg = 'Your order is ready to pickup. Address...'
+      console.log('User exist send sms with order details', userRecord)
+      return msg;
+    }).catch(() => {
+      return createUser(phone_number)
+    })
+
 };

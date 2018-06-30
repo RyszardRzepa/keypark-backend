@@ -1,4 +1,4 @@
-const {GoogleApis} = require('googleapis');
+const { GoogleApis } = require('googleapis');
 const googleapis = new GoogleApis();
 
 const cloudiot = googleapis.cloudiot('v1');
@@ -7,47 +7,38 @@ const PROJECT_ID = 'keypark-backend';
 const REGION = 'europe-west1';
 const REGISTRY = 'asset-tracker-registry';
 
-const API_SCOPES = [
-  'https://www.googleapis.com/auth/cloud-platform',
-  'https://www.googleapis.com/auth/compute',
-  'https://www.googleapis.com/auth/cloudiot'];
+const API_SCOPES = ['https://www.googleapis.com/auth/cloud-platform'];
 
-var deviceID = "0";
-var deviceState = "0";
+let deviceID = "0";
+let deviceState = "0";
 
 function handleDeviceGet(authClient, name, device_id, err, data) {
 
   if (err) {
-    console.log('Error with get device:', device_id);
-    console.log(err);
-    return;
+    console.error(new Error('Error with get device'))
+    return null;
   }
-
-  console.log('Got device:', device_id);
 
   const newConfig = { ledState: deviceState };
   const mydata = new Buffer(JSON.stringify(newConfig), 'utf-8');
   const binaryData = mydata.toString('base64');
 
-  var request2 = {
+  const request2 = {
     name: name,
     resource: {
-      'versionToUpdate' : 0,
-      'binaryData' : binaryData
+      'versionToUpdate': 0,
+      'binaryData': binaryData
     },
     auth: authClient
   };
 
-  console.log(request2);
-
-  var devices = cloudiot.projects.locations.registries.devices;
-  devices.modifyCloudToDeviceConfig(request2, (err, mydata) => {
+  cloudiot.projects.locations.registries.devices.modifyCloudToDeviceConfig(request2, (err, mydata) => {
     if (err) {
-      console.log('Error patching device:', device_id);
-      console.log(err);
+      console.error(new Error('Error patching device'));
+      return null;
     } else {
-      console.log('Patched device:', device_id);
-      console.log(mydata);
+      console.log('Patched device:', device_id, 'mydata', mydata);
+      return null;
     }
   });
 }
@@ -58,7 +49,8 @@ function handleAuth(err, authClient) {
   const name = `projects/${PROJECT_ID}/locations/${REGION}/registries/${REGISTRY}/devices/${device_id}`;
 
   if (err) {
-    return Error('error handleAuth');
+    console.error(new Error('Error in handleAuth()'));
+    return null;
   }
 
   if (authClient.createScopedRequired &&
@@ -68,13 +60,14 @@ function handleAuth(err, authClient) {
       API_SCOPES);
   }
 
-  var request = {
+  const request = {
     name: name,
     auth: authClient
   };
+
   // Get device version
-  var devices = cloudiot.projects.locations.registries.devices;
-  return devices.get(request, (err, data) => handleDeviceGet(authClient, name, device_id, err, data));
+  const devices = cloudiot.projects.locations.registries.devices;
+  devices.get(request, (err, data) => handleDeviceGet(authClient, name, device_id, err, data));
 }
 
 /**
@@ -83,19 +76,15 @@ function handleAuth(err, authClient) {
  * to update the device configuration.
  */
 module.exports = function (deviceId, ledState) {
-
-  console.log(deviceId);
   if (deviceId === null) {
-    return Error( 'Param `deviceId` is required!');
+    return Error('Param `deviceId` is required!');
   }
-
-  console.log(ledState);
   if (ledState === null) {
-    return Error( 'Param `ledState` is required!');
+    return Error('Param `ledState` is required!');
   }
 
   deviceState = ledState;
   deviceID = deviceId;
 
-  return googleapis.auth.getApplicationDefault(handleAuth);
+  googleapis.auth.getApplicationDefault(handleAuth);
 };

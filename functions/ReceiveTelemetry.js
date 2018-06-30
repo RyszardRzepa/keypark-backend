@@ -20,8 +20,8 @@ module.exports = function (message) {
 
   //const deviceId = attributes['deviceId'];
   const data = {
-    deviceId: deviceId,
-    ledStatus: led_state
+    deviceId: deviceId || 'id',
+    ledStatus: led_state || 'status'
   };
 
   return db.collection('devices').add(deviceId, data);
