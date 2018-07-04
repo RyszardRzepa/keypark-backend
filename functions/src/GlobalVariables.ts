@@ -6,7 +6,8 @@ const googleapis = new GoogleApis();
 const db = admin.firestore();
 const api = {
     googleapis,
-    db
+    db,
+    admin
 };
 
 export default api;

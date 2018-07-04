@@ -6,7 +6,8 @@ const googleapis = new googleapis_1.GoogleApis();
 const db = admin.firestore();
 const api = {
     googleapis,
-    db
+    db,
+    admin
 };
 exports.default = api;
 //# sourceMappingURL=GlobalVariables.js.map

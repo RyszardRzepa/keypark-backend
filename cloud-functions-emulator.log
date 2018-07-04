@@ -1,0 +1,675 @@
+2018-07-03T13:02:02.671Z - info: User function triggered, starting execution
+2018-07-03T13:02:02.676Z - info: Function crashed
+2018-07-03T13:02:02.677Z - info: TypeError: Cannot read property 'data' of undefined
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/OnUpdateLocks.js:4:22)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:142:11)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:317:13)
+    at /usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:335:12)
+    at next (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:275:10)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:114:7)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+2018-07-03T13:02:02.684Z - info: Execution took 14 ms, user function completed successfully
+2018-07-03T13:02:18.768Z - info: User function triggered, starting execution
+2018-07-03T13:02:18.769Z - info: Function crashed
+TypeError: Cannot read property 'data' of undefined
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/OnUpdateLocks.js:4:22)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:142:11)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:317:13)
+    at /usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:335:12)
+    at next (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:275:10)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:114:7)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+2018-07-03T13:02:18.770Z - info: Execution took 1 ms, user function completed successfully
+2018-07-03T13:02:23.950Z - info: User function triggered, starting execution
+2018-07-03T13:02:23.950Z - info: Function crashed
+TypeError: Cannot read property 'data' of undefined
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/OnUpdateLocks.js:4:22)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:142:11)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:317:13)
+    at /usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:335:12)
+    at next (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:275:10)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:114:7)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+2018-07-03T13:02:23.951Z - info: Execution took 1 ms, user function completed successfully
+2018-07-03T13:03:54.140Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:04:34.854Z - info: User function triggered, starting execution
+2018-07-03T13:04:34.855Z - info: Function crashed
+TypeError: Cannot read property 'data' of undefined
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/OnUpdateLocks.js:4:22)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:142:11)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:317:13)
+    at /usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:335:12)
+    at next (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:275:10)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:114:7)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+2018-07-03T13:04:34.859Z - info: Execution took 7 ms, user function completed successfully
+2018-07-03T13:04:36.607Z - info: User function triggered, starting execution
+2018-07-03T13:04:36.607Z - info: Function crashed
+TypeError: Cannot read property 'data' of undefined
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/OnUpdateLocks.js:4:22)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:142:11)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:317:13)
+    at /usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:335:12)
+    at next (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:275:10)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:114:7)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+2018-07-03T13:04:36.608Z - info: Execution took 2 ms, user function completed successfully
+2018-07-03T13:04:38.160Z - info: User function triggered, starting execution
+Function crashed
+TypeError: Cannot read property 'data' of undefined
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/OnUpdateLocks.js:4:22)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:142:11)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:317:13)
+    at /usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:335:12)
+    at next (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:275:10)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:114:7)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+2018-07-03T13:04:38.161Z - info: Execution took 0 ms, user function completed successfully
+2018-07-03T13:04:43.409Z - info: User function triggered, starting execution
+2018-07-03T13:04:43.410Z - info: Function crashed
+TypeError: Cannot read property 'data' of undefined
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/OnUpdateLocks.js:4:22)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:142:11)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:317:13)
+    at /usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:335:12)
+    at next (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:275:10)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:114:7)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+2018-07-03T13:04:43.411Z - info: Execution took 1 ms, user function completed successfully
+2018-07-03T13:06:29.963Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:07:27.082Z - info: User function triggered, starting execution
+2018-07-03T13:07:27.084Z - info: Function crashed
+TypeError: Cannot read property 'data' of undefined
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/OnUpdateLocks.js:4:22)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:142:11)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:317:13)
+    at /usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:335:12)
+    at next (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:275:10)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:114:7)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+2018-07-03T13:07:27.091Z - info: Execution took 9 ms, user function completed successfully
+2018-07-03T13:07:31.380Z - info: User function triggered, starting execution
+2018-07-03T13:07:31.380Z - info: Function crashed
+TypeError: Cannot read property 'data' of undefined
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/OnUpdateLocks.js:4:22)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:142:11)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:317:13)
+    at /usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:335:12)
+    at next (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:275:10)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:114:7)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+2018-07-03T13:07:31.382Z - info: Execution took 1 ms, user function completed successfully
+2018-07-03T13:08:41.757Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:09:37.953Z - info: User function triggered, starting execution
+2018-07-03T13:09:37.955Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T13:09:37.955Z - error: No Firebase ID token was passed as a Bearer token in the Authorization header. Make sure you authorize your request by providing the following HTTP header: Authorization: Bearer <Firebase ID Token> or by passing a "__session" cookie.
+2018-07-03T13:09:37.963Z - info: Execution took 12 ms, user function completed successfully
+2018-07-03T13:09:41.814Z - info: User function triggered, starting execution
+2018-07-03T13:09:41.814Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T13:09:41.814Z - error: No Firebase ID token was passed as a Bearer token in the Authorization header. Make sure you authorize your request by providing the following HTTP header: Authorization: Bearer <Firebase ID Token> or by passing a "__session" cookie.
+2018-07-03T13:09:41.816Z - info: Execution took 1 ms, user function completed successfully
+2018-07-03T13:10:47.860Z - info: User function triggered, starting execution
+2018-07-03T13:10:47.860Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:10:47.864Z - info: Execution took 3 ms, user function completed successfully
+2018-07-03T13:10:47.864Z - error: ReferenceError: admin is not defined
+    at validateFirebaseIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:50:5)
+    at Layer.handle [as handle_request] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:317:13)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:275:10)
+    at cookieParser (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/cookie-parser/index.js:56:14)
+    at Layer.handle [as handle_request] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:317:13)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:284:7
+2018-07-03T13:11:30.732Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:11:30.764Z - error: Function worker killed by signal: SIGTERM
+2018-07-03T13:12:03.392Z - info: User function triggered, starting execution
+2018-07-03T13:12:03.395Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:12:03.427Z - error: Error while verifying Firebase ID token: { Error: Firebase ID token has incorrect "iss" (issuer) claim. Expected "https://securetoken.google.com/"keypark-backend" but got "https://identitytoolkit.google.com/". Make sure the ID token comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.
+    at FirebaseAuthError.FirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:39:28)
+    at FirebaseAuthError.PrefixedFirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:85:28)
+    at new FirebaseAuthError (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:143:16)
+    at FirebaseTokenVerifier.verifyJWT (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:136:35)
+    at FirebaseTokenGenerator.verifyIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-generator.js:129:37)
+    at Auth.verifyIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/auth.js:124:37)
+    at validateFirebaseIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:52:18)
+    at Layer.handle [as handle_request] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:317:13)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:284:7
+  errorInfo: 
+   { code: 'auth/argument-error',
+     message: 'Firebase ID token has incorrect "iss" (issuer) claim. Expected "https://securetoken.google.com/"keypark-backend" but got "https://identitytoolkit.google.com/". Make sure the ID token comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.' },
+  codePrefix: 'auth' }
+2018-07-03T13:12:03.435Z - info: Execution took 44 ms, user function completed successfully
+2018-07-03T13:14:15.540Z - info: User function triggered, starting execution
+2018-07-03T13:14:15.540Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:14:15.541Z - error: Error while verifying Firebase ID token: { Error: Firebase ID token has incorrect "iss" (issuer) claim. Expected "https://securetoken.google.com/"keypark-backend" but got "https://identitytoolkit.google.com/". Make sure the ID token comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.
+    at FirebaseAuthError.FirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:39:28)
+    at FirebaseAuthError.PrefixedFirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:85:28)
+    at new FirebaseAuthError (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:143:16)
+    at FirebaseTokenVerifier.verifyJWT (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:136:35)
+    at FirebaseTokenGenerator.verifyIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-generator.js:129:37)
+    at Auth.verifyIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/auth.js:124:37)
+    at validateFirebaseIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:52:18)
+    at Layer.handle [as handle_request] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:317:13)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:284:7
+  errorInfo: 
+   { code: 'auth/argument-error',
+     message: 'Firebase ID token has incorrect "iss" (issuer) claim. Expected "https://securetoken.google.com/"keypark-backend" but got "https://identitytoolkit.google.com/". Make sure the ID token comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.' },
+  codePrefix: 'auth' }
+2018-07-03T13:14:15.543Z - info: Execution took 1 ms, user function completed successfully
+2018-07-03T13:15:38.091Z - info: User function triggered, starting execution
+2018-07-03T13:15:38.091Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:15:38.091Z - error: Error while verifying Firebase ID token: { Error: Firebase ID token has incorrect "iss" (issuer) claim. Expected "https://securetoken.google.com/"keypark-backend" but got "https://identitytoolkit.google.com/". Make sure the ID token comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.
+    at FirebaseAuthError.FirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:39:28)
+    at FirebaseAuthError.PrefixedFirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:85:28)
+    at new FirebaseAuthError (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:143:16)
+    at FirebaseTokenVerifier.verifyJWT (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:136:35)
+    at FirebaseTokenGenerator.verifyIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-generator.js:129:37)
+    at Auth.verifyIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/auth.js:124:37)
+    at validateFirebaseIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:52:18)
+    at Layer.handle [as handle_request] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:317:13)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:284:7
+  errorInfo: 
+   { code: 'auth/argument-error',
+     message: 'Firebase ID token has incorrect "iss" (issuer) claim. Expected "https://securetoken.google.com/"keypark-backend" but got "https://identitytoolkit.google.com/". Make sure the ID token comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.' },
+  codePrefix: 'auth' }
+2018-07-03T13:15:38.093Z - info: Execution took 1 ms, user function completed successfully
+2018-07-03T13:15:51.360Z - info: User function triggered, starting execution
+2018-07-03T13:15:51.360Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:15:51.360Z - error: Error while verifying Firebase ID token: { Error: Firebase ID token has incorrect "iss" (issuer) claim. Expected "https://securetoken.google.com/"keypark-backend" but got "https://identitytoolkit.google.com/". Make sure the ID token comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.
+    at FirebaseAuthError.FirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:39:28)
+    at FirebaseAuthError.PrefixedFirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:85:28)
+    at new FirebaseAuthError (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:143:16)
+    at FirebaseTokenVerifier.verifyJWT (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:136:35)
+    at FirebaseTokenGenerator.verifyIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-generator.js:129:37)
+    at Auth.verifyIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/auth.js:124:37)
+    at validateFirebaseIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:52:18)
+    at Layer.handle [as handle_request] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:317:13)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:284:7
+  errorInfo: 
+   { code: 'auth/argument-error',
+     message: 'Firebase ID token has incorrect "iss" (issuer) claim. Expected "https://securetoken.google.com/"keypark-backend" but got "https://identitytoolkit.google.com/". Make sure the ID token comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.' },
+  codePrefix: 'auth' }
+2018-07-03T13:15:51.361Z - info: Execution took 1 ms, user function completed successfully
+2018-07-03T13:20:20.530Z - info: User function triggered, starting execution
+2018-07-03T13:20:20.530Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:20:20.530Z - error: Error while verifying Firebase ID token: { Error: Firebase ID token has incorrect "iss" (issuer) claim. Expected "https://securetoken.google.com/"keypark-backend" but got "https://identitytoolkit.google.com/". Make sure the ID token comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.
+    at FirebaseAuthError.FirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:39:28)
+    at FirebaseAuthError.PrefixedFirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:85:28)
+    at new FirebaseAuthError (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:143:16)
+    at FirebaseTokenVerifier.verifyJWT (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:136:35)
+    at FirebaseTokenGenerator.verifyIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-generator.js:129:37)
+    at Auth.verifyIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/auth.js:124:37)
+    at validateFirebaseIdToken (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:52:18)
+    at Layer.handle [as handle_request] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:317:13)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/express/lib/router/index.js:284:7
+  errorInfo: 
+   { code: 'auth/argument-error',
+     message: 'Firebase ID token has incorrect "iss" (issuer) claim. Expected "https://securetoken.google.com/"keypark-backend" but got "https://identitytoolkit.google.com/". Make sure the ID token comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.' },
+  codePrefix: 'auth' }
+2018-07-03T13:20:20.531Z - info: Execution took 0 ms, user function completed successfully
+2018-07-03T13:25:51.396Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:25:51.424Z - error: Function worker killed by signal: SIGTERM
+2018-07-03T13:37:21.579Z - info: User function triggered, starting execution
+2018-07-03T13:37:21.582Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T13:37:21.582Z - info: Found "Authorization" header
+2018-07-03T13:37:22.011Z - info: ID Token correctly decoded { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:37:22.017Z - info: Execution took 437 ms, user function completed successfully
+2018-07-03T13:38:00.084Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:38:29.911Z - info: User function triggered, starting execution
+2018-07-03T13:38:29.916Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:38:30.381Z - error: Error while verifying Firebase ID token: TypeError: Cannot read property 'key_expire' of undefined
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:63:76)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:19:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-07-03T13:38:30.385Z - info: Execution took 476 ms, user function completed successfully
+2018-07-03T13:39:31.704Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:39:31.730Z - error: Function worker killed by signal: SIGTERM
+2018-07-03T13:40:00.354Z - info: User function triggered, starting execution
+2018-07-03T13:40:00.358Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:40:00.518Z - info: pgoneNumber undefined
+2018-07-03T13:40:00.520Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:40:00.521Z - error: Error while verifying Firebase ID token: TypeError: Cannot read property 'key_expire' of undefined
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:65:76)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:19:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-07-03T13:40:00.525Z - info: Execution took 172 ms, user function completed successfully
+2018-07-03T13:40:51.377Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:40:51.404Z - error: Function worker killed by signal: SIGTERM
+2018-07-03T13:41:15.099Z - info: User function triggered, starting execution
+2018-07-03T13:41:15.102Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:41:15.270Z - info: pgoneNumber +4791911225
+2018-07-03T13:41:15.272Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:41:15.273Z - error: Error while verifying Firebase ID token: Error: Argument "fieldPath" is not a valid FieldPath. Invalid use of type "undefined" as a Firestore argument.
+    at Object.exports.(anonymous function) [as isFieldPath] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/@google-cloud/firestore/src/validate.js:86:15)
+    at CollectionReference.where (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/@google-cloud/firestore/src/reference.js:1194:14)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:65:58)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:19:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-07-03T13:41:15.279Z - info: Execution took 181 ms, user function completed successfully
+2018-07-03T13:43:21.850Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:43:21.875Z - error: Function worker killed by signal: SIGTERM
+2018-07-03T13:44:08.830Z - info: User function triggered, starting execution
+2018-07-03T13:44:08.837Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T13:44:08.838Z - info: Found "Authorization" header
+2018-07-03T13:44:09.044Z - info: pgoneNumber +4791911225
+2018-07-03T13:44:09.046Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:44:20.186Z - info: User function triggered, starting execution
+2018-07-03T13:44:20.187Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:44:20.188Z - info: pgoneNumber +4791911225
+2018-07-03T13:44:20.188Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:44:50.001Z - info: User function triggered, starting execution
+2018-07-03T13:44:50.002Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:44:50.002Z - info: pgoneNumber +4791911225
+2018-07-03T13:44:50.002Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:44:55.340Z - info: User function triggered, starting execution
+2018-07-03T13:44:55.340Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:44:55.341Z - info: pgoneNumber +4791911225
+2018-07-03T13:44:55.341Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:44:59.945Z - info: User function triggered, starting execution
+2018-07-03T13:44:59.945Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:44:59.947Z - info: pgoneNumber +4791911225
+decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:45:08.823Z - info: Execution took 60007 ms, finished with status: 'timeout'
+2018-07-03T13:45:08.833Z - info: Execution took 8890 ms, finished with status: 'crash'
+2018-07-03T13:45:16.274Z - info: User function triggered, starting execution
+2018-07-03T13:45:16.277Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T13:45:16.277Z - info: Found "Authorization" header
+2018-07-03T13:45:16.478Z - info: pgoneNumber +4791911225
+2018-07-03T13:45:16.480Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:45:20.190Z - info: Execution took 60006 ms, finished with status: 'timeout'
+2018-07-03T13:45:20.202Z - info: Execution took 4748 ms, finished with status: 'crash'
+2018-07-03T13:45:50.003Z - info: Execution took 60004 ms, finished with status: 'timeout'
+2018-07-03T13:45:55.339Z - info: Execution took 60001 ms, finished with status: 'timeout'
+2018-07-03T13:46:22.654Z - info: User function triggered, starting execution
+2018-07-03T13:46:22.658Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:46:22.826Z - info: pgoneNumber +4791911225
+2018-07-03T13:46:22.828Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:47:06.461Z - info: Execution took 43820 ms, finished with status: 'crash'
+2018-07-03T13:47:38.073Z - info: User function triggered, starting execution
+2018-07-03T13:47:38.078Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T13:47:38.079Z - info: Found "Authorization" header
+2018-07-03T13:47:38.470Z - info: pgoneNumber +4791911225
+2018-07-03T13:47:38.472Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:48:23.461Z - info: Execution took 45404 ms, finished with status: 'crash'
+2018-07-03T13:48:46.596Z - info: User function triggered, starting execution
+2018-07-03T13:48:46.601Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:48:47.103Z - info: pgoneNumber +4791911225
+2018-07-03T13:48:47.104Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:48:47.439Z - info: Execution took 843 ms, user function completed successfully
+2018-07-03T13:49:03.938Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:49:42.703Z - info: User function triggered, starting execution
+2018-07-03T13:49:42.708Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:49:43.005Z - info: pgoneNumber +4791911225
+2018-07-03T13:49:43.007Z - info: decodeToken { iss: 'https://securetoken.google.com/keypark-backend',
+  aud: 'keypark-backend',
+  auth_time: 1530016483,
+  user_id: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  sub: 'B3tqod284iQgGkUkyDSm9TJp5BC3',
+  iat: 1530625025,
+  exp: 1530628625,
+  phone_number: '+4791911225',
+  firebase: { identities: { phone: [Array] }, sign_in_provider: 'phone' },
+  uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3' }
+2018-07-03T13:49:45.403Z - info: Execution took 2700 ms, user function completed successfully
+2018-07-03T13:50:21.179Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:51:57.614Z - info: User function triggered, starting execution
+2018-07-03T13:51:57.617Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:51:57.780Z - error: Error while verifying Firebase ID token: TypeError: snap.forEach is not a function
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:65:14)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:19:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-07-03T13:51:57.783Z - info: Execution took 170 ms, user function completed successfully
+2018-07-03T13:52:00.655Z - info: User function triggered, starting execution
+2018-07-03T13:52:00.658Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T13:52:00.658Z - info: Found "Authorization" header
+2018-07-03T13:52:01.110Z - error: Error while verifying Firebase ID token: TypeError: snap.forEach is not a function
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:65:14)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:19:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-07-03T13:52:01.114Z - info: Execution took 459 ms, user function completed successfully
+2018-07-03T13:53:01.082Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:53:01.082Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:53:33.570Z - info: User function triggered, starting execution
+2018-07-03T13:53:33.573Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:53:35.541Z - info: doc data { update_ready: true,
+  '+47919112256': { key_expire: 1530027784539, key_start: 1530024184539 },
+  '+4791911225': { key_expire: 1530176546907, key_start: 1530172946907 },
+  locked: false,
+  roles: { '+4791911225': 'admin' },
+  available: true }
+2018-07-03T13:53:35.541Z - info: doc data { locked: true,
+  available: true,
+  roles: { '+4791911225': 'admin' } }
+2018-07-03T13:53:35.545Z - info: Execution took 1977 ms, user function completed successfully
+2018-07-03T13:53:43.874Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:56:47.675Z - info: User function triggered, starting execution
+2018-07-03T13:56:47.678Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:56:48.406Z - error: Error while verifying Firebase ID token: Error: Argument "fieldPath" is not a valid FieldPath. Invalid use of type "undefined" as a Firestore argument.
+    at Object.exports.(anonymous function) [as isFieldPath] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/@google-cloud/firestore/src/validate.js:86:15)
+    at CollectionReference.where (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/@google-cloud/firestore/src/reference.js:1194:14)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:64:74)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:19:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-07-03T13:56:48.410Z - info: Execution took 736 ms, user function completed successfully
+2018-07-03T13:58:27.218Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T13:58:47.405Z - info: User function triggered, starting execution
+2018-07-03T13:58:47.408Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T13:58:49.302Z - info: Execution took 2754 ms, finished with status: 'crash'
+2018-07-03T13:59:03.693Z - info: User function triggered, starting execution
+2018-07-03T13:59:03.695Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T13:59:03.696Z - info: Found "Authorization" header
+2018-07-03T13:59:05.580Z - info: doc data { roles: { '+4791911225': 'admin' },
+  available: true,
+  update_ready: true,
+  '+47919112256': { key_expire: 1530027784539, key_start: 1530024184539 },
+  '+4791911225': { key_expire: 1530176546907, key_start: 1530172946907 },
+  locked: false }
+2018-07-03T13:59:05.584Z - info: Execution took 1891 ms, user function completed successfully
+2018-07-03T14:01:04.362Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T14:01:32.002Z - info: User function triggered, starting execution
+2018-07-03T14:01:32.004Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:01:34.642Z - info: doc data { update_ready: true,
+  '+47919112256': { key_start: 1530024184539, key_expire: 1530027784539 },
+  '+4791911225': { key_start: 1530172946907, key_expire: 1530176546907 },
+  locked: false,
+  roles: { '+4791911225': 'admin' },
+  available: true }
+2018-07-03T14:01:34.647Z - info: Execution took 2645 ms, user function completed successfully
+2018-07-03T14:02:04.305Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T14:02:31.016Z - info: User function triggered, starting execution
+2018-07-03T14:02:31.020Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:02:33.144Z - info: Execution took 2128 ms, user function completed successfully
+2018-07-03T14:04:21.178Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T14:05:24.994Z - info: User function triggered, starting execution
+2018-07-03T14:05:24.997Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:05:26.842Z - info: Execution took 2877 ms, finished with status: 'crash'
+2018-07-03T14:05:30.677Z - info: User function triggered, starting execution
+2018-07-03T14:05:30.681Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:05:33.153Z - info: Execution took 2475 ms, user function completed successfully
+2018-07-03T14:05:51.162Z - info: User function triggered, starting execution
+2018-07-03T14:05:51.162Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T14:05:51.163Z - info: Found "Authorization" header
+2018-07-03T14:05:51.420Z - info: doc data { name: 'esp32-FC',
+  available: true,
+  update_ready: true,
+  '+47919112256': { key_expire: 1530027784539, key_start: 1530024184539 },
+  '+4791911225': { key_expire: 1, key_start: 1530172946907 },
+  locked: false,
+  roles: { '+4791911225': 'admin' } }
+2018-07-03T14:05:51.421Z - error: Error while verifying Firebase ID token: TypeError: doc.dat is not a function
+    at snap.forEach.doc (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:69:29)
+    at QuerySnapshot.forEach (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/@google-cloud/firestore/src/reference.js:1013:16)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:66:14)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/UpdateLock.js:19:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-07-03T14:05:51.423Z - info: Execution took 260 ms, user function completed successfully
+2018-07-03T14:06:03.065Z - error: Function worker killed by signal: SIGTERM
+2018-07-03T14:06:27.894Z - info: User function triggered, starting execution
+2018-07-03T14:06:27.898Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:06:30.735Z - info: doc data { '+47919112256': { key_expire: 1530027784539, key_start: 1530024184539 },
+  '+4791911225': { key_expire: 1, key_start: 1530172946907 },
+  locked: false,
+  roles: { '+4791911225': 'admin' },
+  name: 'esp32-FC',
+  available: true,
+  update_ready: true }
+2018-07-03T14:06:30.740Z - info: Execution took 2846 ms, user function completed successfully
+2018-07-03T14:07:04.594Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T14:07:08.847Z - info: User function triggered, starting execution
+2018-07-03T14:07:08.849Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T14:07:08.850Z - info: Found "Authorization" header
+2018-07-03T14:07:10.682Z - info: doc data { update_ready: true,
+  '+47919112256': { key_expire: 1530027784539, key_start: 1530024184539 },
+  '+4791911225': { key_expire: 1, key_start: 1530172946907 },
+  locked: false,
+  roles: { '+4791911225': 'admin' },
+  name: 'esp32-FC',
+  available: true }
+2018-07-03T14:07:10.685Z - info: Execution took 1840 ms, user function completed successfully
+2018-07-03T14:10:37.808Z - info: User function triggered, starting execution
+2018-07-03T14:10:37.811Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:10:41.278Z - info: doc data { available: true,
+  update_ready: true,
+  '+47919112256': { key_expire: 1530027784539, key_start: 1530024184539 },
+  '+4791911225': { key_start: 1530172946907, key_expire: 1 },
+  locked: false,
+  roles: { '+4791911225': 'admin' },
+  name: 'esp32-FC' }
+2018-07-03T14:10:41.284Z - info: Execution took 3476 ms, user function completed successfully
+2018-07-03T14:10:53.915Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T14:11:29.812Z - info: User function triggered, starting execution
+2018-07-03T14:11:29.815Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:11:32.271Z - info: doc data { '+47919112256': { key_start: 1530024184539, key_expire: 1530027784539 },
+  '+4791911225': { key_expire: 1, key_start: 1530172946907 },
+  locked: false,
+  roles: { '+4791911225': 'admin' },
+  name: 'esp32-FC',
+  available: true,
+  update_ready: true }
+2018-07-03T14:11:32.276Z - info: Execution took 2464 ms, user function completed successfully
+2018-07-03T14:12:15.566Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T14:14:12.194Z - info: User function triggered, starting execution
+2018-07-03T14:14:12.198Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:14:14.469Z - info: Execution took 2276 ms, user function completed successfully
+2018-07-03T14:14:32.788Z - info: User function triggered, starting execution
+2018-07-03T14:14:32.788Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:14:33.209Z - info: Execution took 421 ms, user function completed successfully
+2018-07-03T14:15:02.231Z - info: User function triggered, starting execution
+2018-07-03T14:15:02.231Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:15:02.429Z - info: Execution took 197 ms, user function completed successfully
+2018-07-03T14:15:22.606Z - info: User function triggered, starting execution
+2018-07-03T14:15:22.607Z - info: Check if request is authorized with Firebase ID token
+Found "Authorization" header
+2018-07-03T14:15:22.965Z - info: Execution took 359 ms, user function completed successfully
+2018-07-03T14:19:08.763Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T14:19:13.750Z - info: User function triggered, starting execution
+2018-07-03T14:19:13.753Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T14:19:13.753Z - info: Found "Authorization" header
+2018-07-03T14:19:14.004Z - error: Error while verifying Firebase ID token: { Error: Firebase ID token has invalid signature. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.
+    at FirebaseAuthError.FirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:39:28)
+    at FirebaseAuthError.PrefixedFirebaseError [as constructor] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:85:28)
+    at new FirebaseAuthError (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/utils/error.js:143:16)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:173:35
+    at Object.module.exports [as verify] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/jsonwebtoken/verify.js:102:12)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:162:17
+    at new Promise (<anonymous>)
+    at FirebaseTokenVerifier.verifyJwtSignatureWithKey (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:161:16)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-admin/lib/auth/token-verifier.js:145:30
+    at <anonymous>
+  errorInfo: 
+   { code: 'auth/argument-error',
+     message: 'Firebase ID token has invalid signature. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.' },
+  codePrefix: 'auth' }
+2018-07-03T14:19:14.007Z - info: Execution took 258 ms, user function completed successfully
+2018-07-03T14:19:30.214Z - info: User function triggered, starting execution
+2018-07-03T14:19:30.214Z - info: Check if request is authorized with Firebase ID token
+2018-07-03T14:19:30.214Z - info: Found "Authorization" header
+2018-07-03T14:19:31.991Z - info: Execution took 1775 ms, user function completed successfully
+2018-07-03T14:21:29.807Z - info: Worker for updateLock closed due to file changes.
+2018-07-03T14:21:29.841Z - error: Function worker killed by signal: SIGTERM

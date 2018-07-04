@@ -74,17 +74,24 @@ function handleAuth(authError, authClient) {
  * call modifyCloudToDeviceConfig method of Cloud IoT Core
  * to update the device configuration.
  */
-module.exports = function (deviceId, ledState) {
+module.exports = function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
+        const deviceId = req.query.deviceId;
+        const ledState = req.query.ledStatus;
+        console.log(deviceId);
         if (deviceId === null) {
-            return null;
+            res.json({ err: 'Param `deviceId` is required!' });
+            return;
         }
+        console.log(ledState);
         if (ledState === null) {
-            return null;
+            res.json({ err: 'Param `ledState` is required' });
+            return;
         }
         deviceState = ledState;
         deviceID = deviceId;
-        return GlobalVariables_1.default.googleapis.auth.getApplicationDefault(handleAuth);
+        yield GlobalVariables_1.default.googleapis.auth.getApplicationDefault(handleAuth);
+        res.status(200).end();
     });
 };
-//# sourceMappingURL=UpdateDeviceConfig.js.map
+//# sourceMappingURL=UpdateDeviceConfigFunction.js.map
