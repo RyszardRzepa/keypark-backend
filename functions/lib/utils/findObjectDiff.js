@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const _ = require("lodash");
+const _ = require('lodash');
 function difference(after, before) {
     function changes(object, base) {
         return _.transform(object, function (result, value, key) {

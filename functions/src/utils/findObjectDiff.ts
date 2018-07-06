@@ -1,4 +1,4 @@
-import _ = require('lodash');
+const _ = require('lodash');
 
 function difference(after, before) {
   function changes(object, base) {

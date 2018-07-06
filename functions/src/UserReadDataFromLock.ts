@@ -7,7 +7,7 @@ const app = express();
 import api from './GlobalVariables';
 
 const admin = api.admin;
-
+let userData = null;
 // validate firebase user token to return limited data to the app user.
 const validateFirebaseIdToken = async (req, res, next) => {
     console.log('Check if request is authorized with Firebase ID token');
@@ -47,11 +47,12 @@ const validateFirebaseIdToken = async (req, res, next) => {
         snap.forEach(doc => {
             let obj = {
                 locked: doc.data().locked,
-                name: doc.data().name
+                name: doc.data().name,
+                id: doc.id,
             };
             data.push(obj)
         });
-        req.user = data;
+        userData = data;
         return next();
     } catch (e) {
         // if admin.auth().verifyIdToken(idToken) failed
@@ -64,7 +65,7 @@ app.use(cors);
 app.use(cookieParser);
 app.use(validateFirebaseIdToken);
 app.get('/', (req, res) => {
-    res.status(200).send(req.user);
+    res.status(200).send(userData);
 });
 
 module.exports = app;

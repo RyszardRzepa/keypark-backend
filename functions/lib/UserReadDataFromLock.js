@@ -14,6 +14,7 @@ const cors = require('cors')({ origin: true });
 const app = express();
 const GlobalVariables_1 = require("./GlobalVariables");
 const admin = GlobalVariables_1.default.admin;
+let userData = null;
 // validate firebase user token to return limited data to the app user.
 const validateFirebaseIdToken = (req, res, next) => __awaiter(this, void 0, void 0, function* () {
     console.log('Check if request is authorized with Firebase ID token');
@@ -49,11 +50,12 @@ const validateFirebaseIdToken = (req, res, next) => __awaiter(this, void 0, void
         snap.forEach(doc => {
             let obj = {
                 locked: doc.data().locked,
-                name: doc.data().name
+                name: doc.data().name,
+                id: doc.id,
             };
             data.push(obj);
         });
-        req.user = data;
+        userData = data;
         return next();
     }
     catch (e) {
@@ -66,7 +68,7 @@ app.use(cors);
 app.use(cookieParser);
 app.use(validateFirebaseIdToken);
 app.get('/', (req, res) => {
-    res.status(200).send(req.user);
+    res.status(200).send(userData);
 });
 module.exports = app;
 //# sourceMappingURL=UserReadDataFromLock.js.map
