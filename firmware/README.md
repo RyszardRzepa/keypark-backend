@@ -1,5 +1,14 @@
 ### Add documentation for firmware code here
 --------------------------------------------------------------------------------------------------------------
+# Setup WiFi via Web UI
+
+- Mongoose OS starts a WiFi network called `DEVICE_SSID` with password
+`devicepass`. Switch your workstation to that WiFi network
+- Point your browser to http://192.168.4.1
+- You'll see a simple form to configure WiFi network & password
+- on submitting the form, the device restarts and connects the specified network
+
+--------------------------------------------------------------------------------------------------------------
 ### Install beta components:
 - `gcloud components install beta`
 ### Authenticate with Google Cloud:
