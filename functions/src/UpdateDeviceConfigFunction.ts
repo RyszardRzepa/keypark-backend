@@ -17,13 +17,13 @@ async function handleDeviceGet(authClient, name, device_id, err, data, res) {
     if (err) {
         console.error(new Error('Error with get device'))
         res.status(403).send('Error with get device')
-        return null;
+        return;
     }
 
     const newConfig = {ledState: deviceState};
     const mydata = new Buffer(JSON.stringify(newConfig), 'utf-8');
     const binaryData = mydata.toString('base64');
-    console.log('in handleDeviceGet, after binaryData')
+
     const request2 = {
         name: name,
         resource: {
@@ -36,14 +36,13 @@ async function handleDeviceGet(authClient, name, device_id, err, data, res) {
     cloudiot.projects.locations.registries.devices.modifyCloudToDeviceConfig(request2, (iotError, clientData) => {
         if (iotError) {
             console.error(new Error('Error patching device'));
-            res.status(403).send('Error patching device');
-            return null;
+            res.status(500).send('Error patching device');
+            return;
         } else {
             console.log('Patched device:', device_id, 'data', clientData);
             res.status(200).end();
         }
     });
-    res.status(200).end();
 }
 
 async function handleAuth(authError, authClient, res) {
@@ -55,7 +54,7 @@ async function handleAuth(authError, authClient, res) {
     if (authError) {
         console.error(new Error('Error in handleAuth()'));
         res.status(403).send('Error in handleAuth()')
-        return null;
+        return;
     }
 
     if (client.createScopedRequired &&
@@ -81,7 +80,7 @@ async function handleAuth(authError, authClient, res) {
  */
 module.exports = async function (req, res) {
     const isAuth = await CheckIfUserIsAuthenticated(req);
-    if (!isAuth) {
+    if (!isAuth.auth) {
         res.status(200).send('You are not unauthorized, to open this lock')
         console.log('UpdateDevice config Unauthorized, to open lock');
         return null;
@@ -91,14 +90,14 @@ module.exports = async function (req, res) {
 
     console.log(deviceId);
     if (deviceId === null) {
-        res.json({err: 'Param `deviceId` is required!'});
         console.log('Param `deviceId` is required!')
+        res.status(400).send('Param `deviceId` is required!')
         return;
     }
 
     console.log(ledState);
     if (ledState === null) {
-        res.json({err: 'Param `ledState` is required'});
+        res.status(400).send('Param `ledState` is required!')
         console.log('Param `ledState` is required')
         return;
     }
@@ -106,10 +105,5 @@ module.exports = async function (req, res) {
     deviceState = ledState;
     deviceID = deviceId;
 
-    try {
-        await api.googleapis.auth.getApplicationDefault((authError, authClient,) => handleAuth(authError, authClient, res));
-        res.send('Config Updated')
-    } catch (e) {
-        res.status(403).send('Something went wrong updating config')
-    }
+    api.googleapis.auth.getApplicationDefault((authError, authClient,) => handleAuth(authError, authClient, res));
 };

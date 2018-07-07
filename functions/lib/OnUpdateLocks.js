@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const l = require('lodash');
-const UpdateDeviceConfig = require('./UpdateDeviceConfig');
 const findObjectDiff = require('./utils/findObjectDiff');
 const GlobalVariables_1 = require("./GlobalVariables");
+const twilio = require('./twilio');
 module.exports = function (change, context) {
     return __awaiter(this, void 0, void 0, function* () {
         const dataAfter = change.after.data();
@@ -19,25 +19,23 @@ module.exports = function (change, context) {
         const checkForFieldsUpdate = (dataAfter.locked === dataBefore.locked &&
             dataAfter.available === dataBefore.available &&
             dataAfter.name === dataBefore.name);
-        // if locked filed is updated updateDeviceConfig
-        if (change.after.data().locked !== change.before.data().locked) {
-            const deviceValue = dataAfter.locked ? '1' : '0';
-            const devId = context.params.lockId;
-            // return UpdateDeviceConfig(devId, deviceValue)
-        }
         //check if lock get new user or update the existing user. Send sms with order details.
         if (checkForFieldsUpdate && l.isEqual(dataAfter.roles, dataBefore.roles)) {
             //double check for diff in user and if just one property is updated
             const diff = findObjectDiff(dataBefore, dataAfter);
             if (Object.keys(diff).length === 1) {
-                console.log('diff keys', Object.keys(diff), 'dif', diff);
                 const phoneNumber = Object.keys(diff)[0];
-                let user = yield GlobalVariables_1.default.admin.auth().getUserByPhoneNumber(phoneNumber);
+                const user = yield GlobalVariables_1.default.admin.auth().getUserByPhoneNumber(phoneNumber);
                 const orderDetails = `Twoje zamowienie jest gotowe do odbioru w paczkobocie na ulicy:
-                 ${dataBefore.address}. 
+                 ${dataBefore.address}.
                  Uzyj aplikacji mobilnej do odebrania zamowienia.
-                 Link do aplikacji: https://keypark.appstore/data/+4791911225`;
+                 Link do aplikacji: https://keypark.page.link/phone`;
                 if (user) {
+                    yield twilio.messages.create({
+                        body: orderDetails,
+                        from: '+18577632916',
+                        to: '+4791911225'
+                    }).catch(err => err);
                     // user exist send sms with the order details
                     return null;
                 }

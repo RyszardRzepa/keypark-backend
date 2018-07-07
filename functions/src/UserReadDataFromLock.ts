@@ -4,48 +4,30 @@ const express = require('express');
 const cookieParser = require('cookie-parser')();
 const cors = require('cors')({origin: true});
 const app = express();
+
 import api from './GlobalVariables';
+import CheckIfUserIsAuthenticated from './utils/CheckIfUserIsAuthenitcated';
 
 const admin = api.admin;
 let userData = null;
+
 // validate firebase user token to return limited data to the app user.
-const validateFirebaseIdToken = async (req, res, next) => {
-    console.log('Check if request is authorized with Firebase ID token');
-
-    if ((!req.headers.authorization || !req.headers.authorization.startsWith('Bearer ')) &&
-        !(req.cookies && req.cookies.__session)) {
-        console.error('No Firebase ID token was passed as a Bearer token in the Authorization header.',
-            'Make sure you authorize your request by providing the following HTTP header:',
-            'Authorization: Bearer <Firebase ID Token>',
-            'or by passing a "__session" cookie.');
-        res.status(403).send('Unauthorized');
-        return;
-    }
-
-    let idToken;
-    if (req.headers.authorization && req.headers.authorization.startsWith('Bearer ')) {
-        console.log('Found "Authorization" header');
-        // Read the ID Token from the Authorization header.
-        idToken = req.headers.authorization.split('Bearer ')[1];
-    } else if (req.cookies) {
-        console.log('Found "__session" cookie');
-        // Read the ID Token from cookie.
-        idToken = req.cookies.__session;
-    } else {
-        // No cookie
-        res.status(403).send('Unauthorized');
+const UserReadDataFromLock = async (req, res, next) => {
+    const isAuth = await CheckIfUserIsAuthenticated(req);
+    if (!isAuth.auth) {
+        res.status(403).send('You are not unauthorized to read this data')
         return;
     }
 
     try {
-        const decodedIdToken = await admin.auth().verifyIdToken(idToken)
+        const decodedIdToken = await admin.auth().verifyIdToken(isAuth.idToken)
         const phoneNumber = decodedIdToken.phone_number;
         const today = Date.now();
-        let data = [];
-        let ref = await api.db.collection('locks').where([phoneNumber] + '.key_expire', ">", today);
-        let snap = await ref.get();
-        snap.forEach(doc => {
-            let obj = {
+        const data = [];
+        const ref = await api.db.collection('locks').where([phoneNumber] + '.key_expire', ">", today);
+        const snap = await ref.get();
+        await snap.forEach(doc => {
+            const obj = {
                 locked: doc.data().locked,
                 name: doc.data().name,
                 id: doc.id,
@@ -63,7 +45,7 @@ const validateFirebaseIdToken = async (req, res, next) => {
 
 app.use(cors);
 app.use(cookieParser);
-app.use(validateFirebaseIdToken);
+app.use(UserReadDataFromLock);
 app.get('/', (req, res) => {
     res.status(200).send(userData);
 });
