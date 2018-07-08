@@ -5,9 +5,8 @@ admin.initializeApp(functions.config().firebase);
 
 const UserReadDataFromLock = require('./UserReadDataFromLock');
 const UpdateDeviceConfigFunction = require('./UpdateDeviceConfigFunction');
-// const ReceiveTelemetry = require('./ReceiveTelemetry');
-// const OnKeyCreate = require('./OnKeysCreate');
 const OnUpdateLocks = require('./OnUpdateLocks');
+// const ReceiveTelemetry = require('./ReceiveTelemetry');
 
 exports.userReadDataFromLock = functions.https.onRequest(UserReadDataFromLock);
 exports.updateDeviceConfig = functions.https.onRequest(UpdateDeviceConfigFunction);

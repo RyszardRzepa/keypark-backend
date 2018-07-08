@@ -81,9 +81,9 @@ async function handleAuth(authError, authClient, res) {
 module.exports = async function (req, res) {
     const isAuth = await CheckIfUserIsAuthenticated(req);
     if (!isAuth.auth) {
-        res.status(200).send('You are not unauthorized, to open this lock')
+        res.status(401).send('You are not unauthorized, to open this lock')
         console.log('UpdateDevice config Unauthorized, to open lock');
-        return null;
+        return;
     }
     const deviceId = req.query.deviceId;
     const ledState = req.query.ledStatus;
