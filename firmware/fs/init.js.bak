@@ -3,21 +3,18 @@ load('api_events.js');
 load('api_gpio.js');
 load('api_net.js');
 load('api_sys.js');
-load('api_rpc.js');
-load('api_timer.js');
 load('api_mqtt.js');
+load('api_timer.js');
 load('api_esp32.js');
 
 let ON = 1;
 let OFF = 0;
 
-let led = 4;
-let button = 0;
+let led = 13;
+let button = Cfg.get('pins.button');
+
 let ledIsOn = false;
 let isMqqtConnected = false;
-
-//let first_boot_flag = ffi('bool mgos_upd_is_first_boot(void)')();//TODO: Figure out why flag is not set
-let first_boot_flag = true; 
 
 let deviceName = Cfg.get('device.id');
 let topic = '/devices/' + deviceName + '/events';
@@ -52,37 +49,6 @@ let getInfo = function() {
   });
 };
 
-function updateDeviceState(){
-
-	let status = Cfg.get('app.ledState');
-	if(status === "1"){ // if message is on
-		turnOnLed();
-	}
-	else if(status === "0"){ // OFF
-		turnOffLed();
-	}
-	else{
-		print('WTF');
-	}
-}
-
-function firmwareUpdate(){
-	print('updating firmware...');
-	let url = "https://dash.mongoose-os.com/api/v1/ota/github_africanwizz/demo-js-esp32.zip";//Cfg.get('app.update_url');
-	let timeout = 300;// Cfg.get('app.update_timeout');
-	
-	RPC.call(RPC.LOCAL,'OTA.Update',{"url": url, "commit_timeout": timeout},
-	function (resp, ud) {
-		print('Response:', JSON.stringify(resp));
-	}, null);
-}
-
-function firmwareCommit(){
-	RPC.call(RPC.LOCAL,'OTA.Commit',null,function (resp, ud) {
-		print('Response:', JSON.stringify(resp));
-	}, null);
-}
-
 function publishData() {
   let message = getInfo();
   let ok = MQTT.pub(topic, message);
@@ -91,10 +57,17 @@ function publishData() {
   return ok;  
 }
 
-GPIO.set_mode(led, GPIO.MODE_OUTPUT);
-Timer.set(5000 /* 1 sec */, Timer.REPEAT, function() {
-  print('uptime:', Sys.uptime());
-}, null);
+function updateLedStatus(status){
+	if(status === "1"){ // if message is on
+		turnOnLed();
+	}
+	else if(status === "0"){ // if message is on
+		turnOffLed();
+	}
+	else{
+		print('WTF');
+	}
+}
 
 // Restart AP mode on button press
 GPIO.set_button_handler(button, GPIO.PULL_UP, GPIO.INT_EDGE_NEG, 20, function() {
@@ -117,21 +90,9 @@ MQTT.sub(
     }
     let obj = JSON.parse(msg);
     if (obj) {
-	  Cfg.set({ app: obj });// update and save all values
-	  if (obj.heading === "update"){
-		//firmware is available, update.
-		firmwareUpdate();
-		}
-	  if(obj.heading === "commit"){
-		//update is approved, commit.
-		firmwareCommit();
-	  }
-	  if(obj.heading === "event"){
-		//Lock/Unlock device
-		updateDeviceState();
-	  }
+      Cfg.set({ app: obj });//TODO:ffind out why its not saving
     }
-	
+	updateLedStatus(obj.ledState);
   },
   null
 );
@@ -141,17 +102,6 @@ MQTT.setEventHandler(function(conn, ev) {
   if (ev === MQTT.EV_CONNACK) {
     print('MQTT CONNECTED');
     isMqqtConnected = true;
-	{
-		if(first_boot_flag === true){ // TODO:Send this message only after update
-			print('First Boot,Commit software');
-			publishData(JSON.stringify({
-					deviceId: deviceName,
-					updated: true
-				})
-			);
-			first_boot_flag = false;
-		}
-	}
   }
 }, null);
 
