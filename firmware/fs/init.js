@@ -11,6 +11,8 @@ let ON = 1;
 let OFF = 0;
 
 let led = 13;
+let button = Cfg.get('pins.button');
+
 let ledIsOn = false;
 let isMqqtConnected = false;
 
@@ -66,6 +68,17 @@ function updateLedStatus(status){
 		print('WTF');
 	}
 }
+
+// Restart AP mode on button press
+GPIO.set_button_handler(button, GPIO.PULL_UP, GPIO.INT_EDGE_NEG, 20, function() {
+  {
+	  Cfg.set({wifi: {ap: {enable: true}}}); //Enable AP and start serving Web page when button is pressed
+	  Cfg.set({wifi: {sta: {enable: false}}}); //Disable station mode
+	  Cfg.set({wifi: {sta: {ssid: ""}}}); //Clear SSID
+	  Cfg.set({wifi: {sta: {ssid: ""}}}); //Clear Password
+	  Sys.reboot(0); //Restart device
+  }
+}, null);
 
 // Subscribe to Cloud IoT Core configuration topic
 MQTT.sub(
