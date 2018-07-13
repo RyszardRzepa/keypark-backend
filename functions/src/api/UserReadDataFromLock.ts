@@ -5,12 +5,13 @@ const cookieParser = require('cookie-parser')();
 const cors = require('cors')({origin: true});
 const app = express();
 
-import api from './GlobalVariables';
-import CheckIfUserIsAuthenticated from './utils/CheckIfUserIsAuthenitcated';
+import api from '../GlobalVariables';
+import CheckIfUserIsAuthenticated from '../utils/CheckIfUserIsAuthenitcated';
 
 const admin = api.admin;
 let userData = null;
 
+// This enpoint is meant only for mobile app users
 // validate firebase user token to return limited data to the app user.
 const UserReadDataFromLock = async (req, res, next) => {
     const isAuth = await CheckIfUserIsAuthenticated(req);

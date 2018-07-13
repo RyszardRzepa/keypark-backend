@@ -1,7 +1,7 @@
-import api from './GlobalVariables';
+import api from '../GlobalVariables';
 
 const cloudiot = api.googleapis.cloudiot('v1');
-import CheckIfUserIsAuthenticated from './utils/CheckIfUserIsAuthenitcated';
+import CheckIfUserIsAuthenticated from '../utils/CheckIfUserIsAuthenitcated';
 
 const PROJECT_ID = 'keypark-backend';
 const REGION = 'europe-west1';

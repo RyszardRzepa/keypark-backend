@@ -1,0 +1,1154 @@
+2018-07-10T07:43:48.427Z - info: User function triggered, starting execution
+2018-07-10T07:43:48.429Z - info: Function crashed
+TypeError: https.post is not a function
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:10:11)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:142:11)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:317:13)
+    at /usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:335:12)
+    at next (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/index.js:275:10)
+    at app.use (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/worker.js:114:7)
+    at Layer.handle [as handle_request] (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/router/layer.js:95:5)
+2018-07-10T07:43:48.435Z - info: Execution took 10 ms, user function completed successfully
+2018-07-10T07:46:35.098Z - info: User function triggered, starting execution
+2018-07-10T07:46:35.101Z - info: Function crashed
+2018-07-10T07:46:35.107Z - info: TypeError: Cannot read property 'body' of undefined
+    at Request._callback (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:12:32)
+    at self.callback (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:160:13)
+    at setContentLength (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/request/request.js:433:14)
+    at Request.init (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/request/request.js:438:5)
+    at new Request (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/request/request.js:127:8)
+    at request (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/request/index.js:53:10)
+    at Function.post (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/request/index.js:61:12)
+    at module.exports (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:11:13)
+    at cloudFunction (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/firebase-functions/lib/providers/https.js:37:41)
+2018-07-10T07:46:35.116Z - info: Execution took 22 ms, user function completed successfully
+2018-07-10T07:46:54.774Z - info: Worker for test closed due to file changes.
+2018-07-10T07:47:47.822Z - info: User function triggered, starting execution
+2018-07-10T07:47:47.832Z - info: res undefined
+2018-07-10T07:47:47.845Z - info: Execution took 30 ms, user function completed successfully
+2018-07-10T07:47:47.883Z - error: _http_outgoing.js:651
+    throw new errors.TypeError('ERR_INVALID_ARG_TYPE', 'first argument',
+    ^
+
+TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be one of type string or Buffer
+    at write_ (_http_outgoing.js:651:11)
+    at ClientRequest.write (_http_outgoing.js:626:10)
+    at Request.write (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/request/request.js:1495:27)
+    at end (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/request/request.js:545:18)
+    at Immediate.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/request/request.js:574:7)
+    at runCallback (timers.js:756:18)
+    at tryOnImmediate (timers.js:717:5)
+    at processImmediate [as _immediateCallback] (timers.js:697:5)
+2018-07-10T07:47:47.926Z - error: Function worker crashed with exit code: 1
+2018-07-10T07:50:22.700Z - info: User function triggered, starting execution
+2018-07-10T07:50:22.724Z - info: Execution took 25 ms, user function completed successfully
+2018-07-10T07:50:23.214Z - info: { status: 200,
+  statusText: 'OK',
+  headers: 
+   { expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+     pragma: 'no-cache',
+     'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+     date: 'Tue, 10 Jul 2018 07:50:23 GMT',
+     'content-type': 'application/json; charset=UTF-8',
+     vary: 'X-Origin, Referer, Origin,Accept-Encoding',
+     server: 'ESF',
+     'x-xss-protection': '1; mode=block',
+     'x-frame-options': 'SAMEORIGIN',
+     'x-content-type-options': 'nosniff',
+     'alt-svc': 'quic=":443"; ma=2592000; v="43,42,41,39,35"',
+     'accept-ranges': 'none',
+     connection: 'close' },
+  config: 
+   { adapter: [Function: httpAdapter],
+     transformRequest: { '0': [Function: transformRequest] },
+     transformResponse: { '0': [Function: transformResponse] },
+     timeout: 0,
+     xsrfCookieName: 'XSRF-TOKEN',
+     xsrfHeaderName: 'X-XSRF-TOKEN',
+     maxContentLength: -1,
+     validateStatus: [Function: validateStatus],
+     headers: 
+      { Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json;charset=utf-8',
+        'User-Agent': 'axios/0.18.0',
+        'Content-Length': 43 },
+     method: 'post',
+     url: 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyApDubJuHpp99O0ChSLps7XYN0XAZiljc8',
+     data: '{"email":"test@wp.pl","password":"test123"}' },
+  request: 
+   ClientRequest {
+     domain: null,
+     _events: 
+      { socket: [Function],
+        abort: [Function],
+        aborted: [Function],
+        error: [Function],
+        timeout: [Function],
+        prefinish: [Function: requestOnPrefinish] },
+     _eventsCount: 6,
+     _maxListeners: undefined,
+     output: [],
+     outputEncodings: [],
+     outputCallbacks: [],
+     outputSize: 0,
+     writable: true,
+     _last: true,
+     upgrading: false,
+     chunkedEncoding: false,
+     shouldKeepAlive: false,
+     useChunkedEncodingByDefault: true,
+     sendDate: false,
+     _removedConnection: false,
+     _removedContLen: false,
+     _removedTE: false,
+     _contentLength: null,
+     _hasBody: true,
+     _trailer: '',
+     finished: true,
+     _headerSent: true,
+     socket: 
+      TLSSocket {
+        _tlsOptions: [Object],
+        _secureEstablished: true,
+        _securePending: false,
+        _newSessionPending: false,
+        _controlReleased: true,
+        _SNICallback: null,
+        servername: 'www.googleapis.com',
+        npnProtocol: false,
+        alpnProtocol: false,
+        authorized: true,
+        authorizationError: null,
+        encrypted: true,
+        _events: [Object],
+        _eventsCount: 10,
+        connecting: false,
+        _hadError: false,
+        _handle: null,
+        _parent: null,
+        _host: 'www.googleapis.com',
+        _readableState: [ReadableState],
+        readable: false,
+        domain: null,
+        _maxListeners: undefined,
+        _writableState: [WritableState],
+        writable: false,
+        allowHalfOpen: false,
+        _bytesDispatched: 332,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: undefined,
+        _server: null,
+        ssl: null,
+        _requestCert: true,
+        _rejectUnauthorized: true,
+        parser: null,
+        _httpMessage: [Circular],
+        read: [Function],
+        _consuming: true,
+        write: [Function: writeAfterFIN],
+        _idleNext: null,
+        _idlePrev: null,
+        _idleTimeout: -1,
+        [Symbol(res)]: [TLSWrap],
+        [Symbol(asyncId)]: 32,
+        [Symbol(bytesRead)]: 1339,
+        [Symbol(connect-options)]: [Object] },
+     connection: 
+      TLSSocket {
+        _tlsOptions: [Object],
+        _secureEstablished: true,
+        _securePending: false,
+        _newSessionPending: false,
+        _controlReleased: true,
+        _SNICallback: null,
+        servername: 'www.googleapis.com',
+        npnProtocol: false,
+        alpnProtocol: false,
+        authorized: true,
+        authorizationError: null,
+        encrypted: true,
+        _events: [Object],
+        _eventsCount: 10,
+        connecting: false,
+        _hadError: false,
+        _handle: null,
+        _parent: null,
+        _host: 'www.googleapis.com',
+        _readableState: [ReadableState],
+        readable: false,
+        domain: null,
+        _maxListeners: undefined,
+        _writableState: [WritableState],
+        writable: false,
+        allowHalfOpen: false,
+        _bytesDispatched: 332,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: undefined,
+        _server: null,
+        ssl: null,
+        _requestCert: true,
+        _rejectUnauthorized: true,
+        parser: null,
+        _httpMessage: [Circular],
+        read: [Function],
+        _consuming: true,
+        write: [Function: writeAfterFIN],
+        _idleNext: null,
+        _idlePrev: null,
+        _idleTimeout: -1,
+        [Symbol(res)]: [TLSWrap],
+        [Symbol(asyncId)]: 32,
+        [Symbol(bytesRead)]: 1339,
+        [Symbol(connect-options)]: [Object] },
+     _header: 'POST /identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyApDubJuHpp99O0ChSLps7XYN0XAZiljc8 HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nContent-Type: application/json;charset=utf-8\r\nUser-Agent: axios/0.18.0\r\nContent-Length: 43\r\nHost: www.googleapis.com\r\nConnection: close\r\n\r\n',
+     _onPendingData: [Function: noopPendingOutput],
+     agent: 
+      Agent {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        defaultPort: 443,
+        protocol: 'https:',
+        options: [Object],
+        requests: {},
+        sockets: [Object],
+        freeSockets: {},
+        keepAliveMsecs: 1000,
+        keepAlive: false,
+        maxSockets: Infinity,
+        maxFreeSockets: 256,
+        maxCachedSessions: 100,
+        _sessionCache: [Object] },
+     socketPath: undefined,
+     timeout: undefined,
+     method: 'POST',
+     path: '/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyApDubJuHpp99O0ChSLps7XYN0XAZiljc8',
+     _ended: true,
+     res: 
+      IncomingMessage {
+        _readableState: [ReadableState],
+        readable: false,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 3,
+        _maxListeners: undefined,
+        socket: [TLSSocket],
+        connection: [TLSSocket],
+        httpVersionMajor: 1,
+        httpVersionMinor: 1,
+        httpVersion: '1.1',
+        complete: true,
+        headers: [Object],
+        rawHeaders: [Array],
+        trailers: {},
+        rawTrailers: [],
+        upgrade: false,
+        url: '',
+        method: null,
+        statusCode: 200,
+        statusMessage: 'OK',
+        client: [TLSSocket],
+        _consuming: true,
+        _dumped: false,
+        req: [Circular],
+        responseUrl: 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyApDubJuHpp99O0ChSLps7XYN0XAZiljc8',
+        redirects: [],
+        read: [Function] },
+     aborted: undefined,
+     timeoutCb: null,
+     upgradeOrConnect: false,
+     parser: null,
+     maxHeadersCount: null,
+     _redirectable: 
+      Writable {
+        _writableState: [WritableState],
+        writable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 2,
+        _maxListeners: undefined,
+        _options: [Object],
+        _redirectCount: 0,
+        _redirects: [],
+        _requestBodyLength: 43,
+        _requestBodyBuffers: [],
+        _onNativeResponse: [Function],
+        _currentRequest: [Circular],
+        _currentUrl: 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyApDubJuHpp99O0ChSLps7XYN0XAZiljc8' },
+     [Symbol(outHeadersKey)]: 
+      { accept: [Array],
+        'content-type': [Array],
+        'user-agent': [Array],
+        'content-length': [Array],
+        host: [Array] } },
+  data: 
+   { kind: 'identitytoolkit#VerifyPasswordResponse',
+     localId: 'DE3FWiZzNYPhieVtaQ9PZyUknSB3',
+     email: 'test@wp.pl',
+     displayName: '',
+     idToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IlFEQXl2QSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6ImtleXBhcmstYmFja2VuZCIsImlhdCI6MTUzMTIwOTAyMywiZXhwIjoxNTMyNDE4NjIzLCJ1c2VyX2l
+2018-07-10T07:50:23.216Z - info: kIjoiREUzRldpWnpOWVBoaWVWdGFROVBaeVVrblNCMyIsImVtYWlsIjoidGVzdEB3cC5wbCIsInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInZlcmlmaWVkIjpmYWxzZX0.FYFCEjMK-1O8fJnoIaEASuVw5ZexsWgTBYM74vMygbKAtR2YCUHgUyeOTeIDVbLgXF6GWokQm5_54E6dFIbYj-YXktrO7Q0lkB9O22lULpup-6v7IYm0a_sow4HxmhpUhQbBf0l1jPUZkVzZlU0FePG6cutmVYBb1_dnB8tj1tT89aEAZkM3gg34M4YyYeG8Sr6xUifZatBXx6wM0ILUWnfXyHlUaQbJ5NDvKJqV8awmqreExIt8qJZI6TqpfmSw14D24EV5z1iY6HKLUXEFW3uuOvrZ2HOBQWcePtb8EwpwZG7J4KVIJ7pYRk9t5zdlYuVP0wpjnCPHL6Byma_O4A',
+     registered: true } }
+2018-07-10T07:51:44.711Z - info: Worker for test closed due to file changes.
+2018-07-10T07:53:44.151Z - info: User function triggered, starting execution
+2018-07-10T07:53:45.768Z - error: (node:16120) UnhandledPromiseRejectionWarning: Error: Request failed with status code 403
+    at createError (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/core/settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/adapters/http.js:201:11)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+2018-07-10T07:53:45.769Z - error: (node:16120) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:16120) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-10T07:56:36.184Z - info: User function triggered, starting execution
+2018-07-10T07:56:37.886Z - info: Execution took 1706 ms, user function completed successfully
+2018-07-10T07:56:52.908Z - info: Worker for test closed due to file changes.
+2018-07-10T07:57:37.122Z - info: User function triggered, starting execution
+2018-07-10T07:57:38.830Z - error: Tue, 10 Jul 2018 07:57:38 GMT express deprecated res.send(status, body): Use res.status(status).send(body) instead at lib/test.js:35:25
+2018-07-10T07:57:38.832Z - error: (node:16300) UnhandledPromiseRejectionWarning: TypeError: Converting circular structure to JSON
+    at JSON.stringify (<anonymous>)
+    at stringify (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:1119:12)
+    at ServerResponse.json (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:260:14)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:158:21)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:35:25)
+    at Generator.throw (<anonymous>)
+    at rejected (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:4:65)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-07-10T07:57:38.832Z - error: (node:16300) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:16300) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-10T07:58:37.106Z - info: Execution took 60003 ms, finished with status: 'timeout'
+2018-07-10T07:58:37.119Z - info: Execution took 60017 ms, finished with status: 'crash'
+2018-07-10T07:58:37.120Z - error: Something went wrong with the function!
+2018-07-10T07:58:37.120Z - error:  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:267:15)
+    at ProxyServer.Supervisor._proxy.on (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/supervisor.js:107:14)
+    at ProxyServer.emit (/usr/local/lib/node_modules/firebase-tools/node_modules/eventemitter3/index.js:144:27)
+    at ClientRequest.proxyError (/usr/local/lib/node_modules/firebase-tools/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js:156:18)
+    at ClientRequest.emit (events.js:160:13)
+    at Socket.socketOnEnd (_http_client.js:423:9)
+2018-07-10T07:58:37.146Z - error: Function worker killed by signal: SIGTERM
+2018-07-10T08:00:25.153Z - info: User function triggered, starting execution
+2018-07-10T08:00:27.074Z - info: user { Error: Request failed with status code 401
+    at createError (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/core/settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/adapters/http.js:201:11)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:152:19)
+  config: 
+   { adapter: [Function: httpAdapter],
+     transformRequest: { '0': [Function: transformRequest] },
+     transformResponse: { '0': [Function: transformResponse] },
+     timeout: 0,
+     xsrfCookieName: 'XSRF-TOKEN',
+     xsrfHeaderName: 'X-XSRF-TOKEN',
+     maxContentLength: -1,
+     validateStatus: [Function: validateStatus],
+     headers: 
+      { Accept: 'application/json, text/plain, */*',
+        Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IlFEQXl2QSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6ImtleXBhcmstYmFja2VuZCIsImlhdCI6MTUzMTIwOTYyNSwiZXhwIjoxNTMyNDE5MjI1LCJ1c2VyX2lkIjoiREUzRldpWnpOWVBoaWVWdGFROVBaeVVrblNCMyIsImVtYWlsIjoidGVzdEB3cC5wbCIsInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInZlcmlmaWVkIjpmYWxzZX0.aaITu8Dh4R_PEhyh-DqzRk4SMFT8f9S8SaK3Y1mosd_Cg-LPQBpj6oWolFzXxBmxh6YJCpyPBTIOamyOnbIInznWimmCim20Z1wL1NKor3MVcv2Dc0KC97RmJ6hO8WZcH-DnF71TUaiuK0PjUv4RQvckGfF9lZ0AvWWDZ6B9Ch7tRaqERPlP5opl0xwokgjYUDeE1N22tof9lfRFsD3SVz34cstsssCFS8N374Td_mGmgLt99OBlAbj-xq35G_6XKhTIPhLdtnyJdkS1-A4C3neYHibzLcpjqUxWp2xqR-vorY89XFouQqH9AxrbICBxxbA5pjjWl-YFKQIqhUHc0g',
+        'User-Agent': 'axios/0.18.0' },
+     method: 'get',
+     url: 'https://firestore.googleapis.com/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields',
+     data: undefined },
+  request: 
+   ClientRequest {
+     domain: null,
+     _events: 
+      { socket: [Function],
+        abort: [Function],
+        aborted: [Function],
+        error: [Function],
+        timeout: [Function],
+        prefinish: [Function: requestOnPrefinish] },
+     _eventsCount: 6,
+     _maxListeners: undefined,
+     output: [],
+     outputEncodings: [],
+     outputCallbacks: [],
+     outputSize: 0,
+     writable: true,
+     _last: true,
+     upgrading: false,
+     chunkedEncoding: false,
+     shouldKeepAlive: false,
+     useChunkedEncodingByDefault: false,
+     sendDate: false,
+     _removedConnection: false,
+     _removedContLen: false,
+     _removedTE: false,
+     _contentLength: 0,
+     _hasBody: true,
+     _trailer: '',
+     finished: true,
+     _headerSent: true,
+     socket: 
+      TLSSocket {
+        _tlsOptions: [Object],
+        _secureEstablished: true,
+        _securePending: false,
+        _newSessionPending: false,
+        _controlReleased: true,
+        _SNICallback: null,
+        servername: 'firestore.googleapis.com',
+        npnProtocol: false,
+        alpnProtocol: false,
+        authorized: true,
+        authorizationError: null,
+        encrypted: true,
+        _events: [Object],
+        _eventsCount: 10,
+        connecting: false,
+        _hadError: false,
+        _handle: null,
+        _parent: null,
+        _host: 'firestore.googleapis.com',
+        _readableState: [ReadableState],
+        readable: false,
+        domain: null,
+        _maxListeners: undefined,
+        _writableState: [WritableState],
+        writable: false,
+        allowHalfOpen: false,
+        _bytesDispatched: 940,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: undefined,
+        _server: null,
+        ssl: null,
+        _requestCert: true,
+        _rejectUnauthorized: true,
+        parser: null,
+        _httpMessage: [Circular],
+        read: [Function],
+        _consuming: true,
+        write: [Function: writeAfterFIN],
+        _idleNext: null,
+        _idlePrev: null,
+        _idleTimeout: -1,
+        [Symbol(res)]: [TLSWrap],
+        [Symbol(asyncId)]: 39,
+        [Symbol(bytesRead)]: 760,
+        [Symbol(connect-options)]: [Object] },
+     connection: 
+      TLSSocket {
+        _tlsOptions: [Object],
+        _secureEstablished: true,
+        _securePending: false,
+        _newSessionPending: false,
+        _controlReleased: true,
+        _SNICallback: null,
+        servername: 'firestore.googleapis.com',
+        npnProtocol: false,
+        alpnProtocol: false,
+        authorized: true,
+        authorizationError: null,
+        encrypted: true,
+        _events: [Object],
+        _eventsCount: 10,
+        connecting: false,
+        _hadError: false,
+        _handle: null,
+        _parent: null,
+        _host: 'firestore.googleapis.com',
+        _readableState: [ReadableState],
+        readable: false,
+        domain: null,
+        _maxListeners: undefined,
+        _writableState: [WritableState],
+        writable: false,
+        allowHalfOpen: false,
+        _bytesDispatched: 940,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: undefined,
+        _server: null,
+        ssl: null,
+        _requestCert: true,
+        _rejectUnauthorized: true,
+        parser: null,
+        _httpMessage: [Circular],
+        read: [Function],
+        _consuming: true,
+        write: [Function: writeAfterFIN],
+        _idleNext: null,
+        _idlePrev: null,
+        _idleTimeout: -1,
+        [Symbol(res)]: [TLSWrap],
+        [Symbol(asyncId)]: 39,
+        [Symbol(bytesRead)]: 760,
+        [Symbol(connect-options)]: [Object] },
+     _header: 'GET /v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nAuthorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IlFEQXl2QSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6ImtleXBhcmstYmFja2VuZCIsImlhdCI6MTUzMTIwOTYyNSwiZXhwIjoxNTMyNDE5MjI1LCJ1c2VyX2lkIjoiREUzRldpWnpOWVBoaWVWdGFROVBaeVVrblNCMyIsImVtYWlsIjoidGVzdEB3cC5wbCIsInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInZlcmlmaWVkIjpmYWxzZX0.aaITu8Dh4R_PEhyh-DqzRk4SMFT8f9S8SaK3Y1mosd_Cg-LPQBpj6oWolFzXxBmxh6YJCpyPBTIOamyOnbIInznWimmCim20Z1wL1NKor3MVcv2Dc0KC97RmJ6hO8WZcH-DnF71TUaiuK0PjUv4RQvckGfF9lZ0AvWWDZ6B9Ch7tRaqERPlP5opl0xwokgjYUDeE1N22tof9lfRFsD3SVz34cstsssCFS8N374Td_mGmgLt99OBlAbj-xq35G_6XKhTIPhLdtnyJdkS1-A4C3neYHibzLcpjqUxWp2xqR-vorY89XFouQqH9AxrbICBxxbA5pjjWl-YFKQIqhUHc0g\r\nUser-Agent: axios/0.18.0\r\nHost: firestore.googleapis.com\r\nConnection: close\r\n\r\n',
+     _onPendingData: [Function: noopPendingOutput],
+     agent: 
+      Agent {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        defaultPort: 443,
+        protocol: 'https:',
+        options: [Object],
+        requests: {},
+        sockets: [Object],
+        freeSockets: {},
+        keepAliveMsecs: 1000,
+        keepAlive: false,
+        maxSockets: Infinity,
+        maxFreeSockets: 256,
+        maxCachedSessions: 100,
+        _sessionCache: [Object] },
+     socketPath: undefined,
+     timeout: undefined,
+     method: 'GET',
+     path: '/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields',
+     _ended: true,
+     res: 
+      IncomingMessage {
+        _readableState: [ReadableState],
+        readable: false,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 3,
+        _maxListeners: undefined,
+        socket: [TLSSocket],
+        connection: [TLSSocket],
+        httpVersionMajor: 1,
+        httpVersionMinor: 1,
+        httpVersion: '1.1',
+        complete: true,
+        headers: [Object],
+        rawHeaders: [Array],
+        trailers: {},
+        rawTrailers: [],
+        upgrade: false,
+        url: '',
+        method: null,
+        statusCode: 401,
+        statusMessage: 'Unauthorized',
+        client: [TLSSocket],
+        _consuming: true,
+        _dumped: false,
+        req: [Circular],
+        responseUrl: 'https://firestore.googleapis.com/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzN
+2018-07-10T08:00:27.080Z - info: YPhieVtaQ9PZyUknSB3?fields=fields',
+        redirects: [],
+        read: [Function] },
+     aborted: undefined,
+     timeoutCb: null,
+     upgradeOrConnect: false,
+     parser: null,
+     maxHeadersCount: null,
+     _redirectable: 
+      Writable {
+        _writableState: [WritableState],
+        writable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 2,
+        _maxListeners: undefined,
+        _options: [Object],
+        _redirectCount: 0,
+        _redirects: [],
+        _requestBodyLength: 0,
+        _requestBodyBuffers: [],
+        _onNativeResponse: [Function],
+        _currentRequest: [Circular],
+        _currentUrl: 'https://firestore.googleapis.com/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields' },
+     [Symbol(outHeadersKey)]: 
+      { accept: [Array],
+        authorization: [Array],
+        'user-agent': [Array],
+        host: [Array] } },
+  response: 
+   { status: 401,
+     statusText: 'Unauthorized',
+     headers: 
+      { 'www-authenticate': 'Bearer realm="https://accounts.google.com/"',
+        vary: 'X-Origin, Referer, Origin,Accept-Encoding',
+        'content-type': 'application/json; charset=UTF-8',
+        date: 'Tue, 10 Jul 2018 08:00:26 GMT',
+        server: 'ESF',
+        'cache-control': 'private',
+        'x-xss-protection': '1; mode=block',
+        'x-frame-options': 'SAMEORIGIN',
+        'x-content-type-options': 'nosniff',
+        'alt-svc': 'quic=":443"; ma=2592000; v="43,42,41,39,35"',
+        'accept-ranges': 'none',
+        connection: 'close' },
+     config: 
+      { adapter: [Function: httpAdapter],
+        transformRequest: [Object],
+        transformResponse: [Object],
+        timeout: 0,
+        xsrfCookieName: 'XSRF-TOKEN',
+        xsrfHeaderName: 'X-XSRF-TOKEN',
+        maxContentLength: -1,
+        validateStatus: [Function: validateStatus],
+        headers: [Object],
+        method: 'get',
+        url: 'https://firestore.googleapis.com/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields',
+        data: undefined },
+     request: 
+      ClientRequest {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 6,
+        _maxListeners: undefined,
+        output: [],
+        outputEncodings: [],
+        outputCallbacks: [],
+        outputSize: 0,
+        writable: true,
+        _last: true,
+        upgrading: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: false,
+        useChunkedEncodingByDefault: false,
+        sendDate: false,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        _contentLength: 0,
+        _hasBody: true,
+        _trailer: '',
+        finished: true,
+        _headerSent: true,
+        socket: [TLSSocket],
+        connection: [TLSSocket],
+        _header: 'GET /v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nAuthorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IlFEQXl2QSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6ImtleXBhcmstYmFja2VuZCIsImlhdCI6MTUzMTIwOTYyNSwiZXhwIjoxNTMyNDE5MjI1LCJ1c2VyX2lkIjoiREUzRldpWnpOWVBoaWVWdGFROVBaeVVrblNCMyIsImVtYWlsIjoidGVzdEB3cC5wbCIsInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInZlcmlmaWVkIjpmYWxzZX0.aaITu8Dh4R_PEhyh-DqzRk4SMFT8f9S8SaK3Y1mosd_Cg-LPQBpj6oWolFzXxBmxh6YJCpyPBTIOamyOnbIInznWimmCim20Z1wL1NKor3MVcv2Dc0KC97RmJ6hO8WZcH-DnF71TUaiuK0PjUv4RQvckGfF9lZ0AvWWDZ6B9Ch7tRaqERPlP5opl0xwokgjYUDeE1N22tof9lfRFsD3SVz34cstsssCFS8N374Td_mGmgLt99OBlAbj-xq35G_6XKhTIPhLdtnyJdkS1-A4C3neYHibzLcpjqUxWp2xqR-vorY89XFouQqH9AxrbICBxxbA5pjjWl-YFKQIqhUHc0g\r\nUser-Agent: axios/0.18.0\r\nHost: firestore.googleapis.com\r\nConnection: close\r\n\r\n',
+        _onPendingData: [Function: noopPendingOutput],
+        agent: [Agent],
+        socketPath: undefined,
+        timeout: undefined,
+        method: 'GET',
+        path: '/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields',
+        _ended: true,
+        res: [IncomingMessage],
+        aborted: undefined,
+        timeoutCb: null,
+        upgradeOrConnect: false,
+        parser: null,
+        maxHeadersCount: null,
+        _redirectable: [Writable],
+        [Symbol(outHeadersKey)]: [Object] },
+     data: { error: [Object] } } }
+Execution took 1936 ms, user function completed successfully
+2018-07-10T08:02:46.333Z - info: Worker for test closed due to file changes.
+2018-07-10T08:03:21.837Z - error: (node:16472) UnhandledPromiseRejectionWarning: TypeError [ERR_INVALID_ARG_TYPE]: The "url" argument must be of type string. Received type undefined
+    at Url.parse (url.js:106:11)
+    at Object.urlParse [as parse] (url.js:100:13)
+    at dispatchHttpRequest (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/adapters/http.js:57:22)
+    at new Promise (<anonymous>)
+    at httpAdapter (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/adapters/http.js:18:10)
+    at dispatchRequest (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/core/dispatchRequest.js:59:10)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-07-10T08:03:21.839Z - error: (node:16472) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+(node:16472) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-10T08:03:41.079Z - info: User function triggered, starting execution
+2018-07-10T08:03:41.079Z - error: Tue, 10 Jul 2018 08:03:41 GMT express deprecated res.send(status, body): Use res.status(status).send(body) instead at lib/test.js:42:25
+2018-07-10T08:03:41.111Z - error: (node:16472) UnhandledPromiseRejectionWarning: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: no auth
+    at ServerResponse.writeHead (_http_server.js:193:11)
+    at ServerResponse._implicitHeader (_http_server.js:184:8)
+    at write_ (_http_outgoing.js:641:9)
+    at ServerResponse.end (_http_outgoing.js:762:5)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:221:10)
+    at ServerResponse.json (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:158:21)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:42:25)
+    at Generator.next (<anonymous>)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:6:71
+2018-07-10T08:03:41.111Z - error: (node:16472) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+2018-07-10T08:07:51.046Z - info: User function triggered, starting execution
+2018-07-10T08:07:51.595Z - info: token { kind: 'identitytoolkit#VerifyPasswordResponse',
+  localId: 'DE3FWiZzNYPhieVtaQ9PZyUknSB3',
+  email: 'test@wp.pl',
+  displayName: '',
+  idToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IlFEQXl2QSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6ImtleXBhcmstYmFja2VuZCIsImlhdCI6MTUzMTIxMDA3MSwiZXhwIjoxNTMyNDE5NjcxLCJ1c2VyX2lkIjoiREUzRldpWnpOWVBoaWVWdGFROVBaeVVrblNCMyIsImVtYWlsIjoidGVzdEB3cC5wbCIsInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInZlcmlmaWVkIjpmYWxzZX0.SF629YXuT8nRs7jct1LkKwejNATcwtl72_nvMk4F0JTUE-R8nYzC5fvPYcTDzvIsmQHzjWMXn2RuBl4e8QDNjbfkDb_7N3bhea27EcwDI2KVVIAE_Bq3GHN9P22bmHYctgnK894ik-4xVDJi8aXyoInFDqilfnoVUd64AAiw4KC3wfFa0c9ACxCUE2UlcGJitycEwjlKLhrhC1N8DT9xkdC5BTQh97GWDenvofayEYxpQQZcPwo4qw4YYdVsW42O7hHdNeZdxufK5FzjSxb-fYpkV4JvHgt999ZCZopB5glyZ0bYV3yJVFTp9OE3MZ2-styzdLbAc89a1g1BzLaXAw',
+  registered: true }
+2018-07-10T08:07:51.600Z - info: Execution took 557 ms, user function completed successfully
+2018-07-10T08:11:51.194Z - info: Worker for test closed due to file changes.
+2018-07-10T08:12:49.217Z - info: User function triggered, starting execution
+2018-07-10T08:12:49.710Z - info: token { kind: 'identitytoolkit#VerifyPasswordResponse',
+  localId: 'DE3FWiZzNYPhieVtaQ9PZyUknSB3',
+  email: 'test@wp.pl',
+  displayName: '',
+  idToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IlFEQXl2QSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6ImtleXBhcmstYmFja2VuZCIsImlhdCI6MTUzMTIxMDM2OSwiZXhwIjoxNTMyNDE5OTY5LCJ1c2VyX2lkIjoiREUzRldpWnpOWVBoaWVWdGFROVBaeVVrblNCMyIsImVtYWlsIjoidGVzdEB3cC5wbCIsInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInZlcmlmaWVkIjpmYWxzZX0.AdoDNjDxEbU4rX8Fy1sm7is1C-f6lxZ-eZFq-So0y8cELYuvwormW_OUQX1xyDGuW6rfd0PHca_WsbYYMtiyk7eeUyDQELMIXyQ1HP84R2AVNFKsLWhhTpUD9HKmN8XLZeLBXex4L6vU48IzSnYVMJNxDrnhC7JJwt_H87NvmPBlodgcK5MbgY3qoH_VH3RSC1qs5O0jCkOpLTccRyIUsFb7f3UUiB5PHocecEwQrjw_FCGxisyHIqcHYrZiIrgkx3i1k7lz4oP3hlfMjRnYLPIUe5m7rmdmQmsvCDbctQfd2Mbcz92-3ZjQ77AANfMggSrdcwiDnE4oN_g_hd2hsA',
+  registered: true }
+2018-07-10T08:12:50.721Z - info: user { Error: timeout of 1000ms exceeded
+    at createError (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/core/createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/adapters/http.js:216:16)
+    at ontimeout (timers.js:458:11)
+    at tryOnTimeout (timers.js:296:5)
+    at Timer.listOnTimeout (timers.js:259:5)
+  config: 
+   { adapter: [Function: httpAdapter],
+     transformRequest: { '0': [Function: transformRequest] },
+     transformResponse: { '0': [Function: transformResponse] },
+     timeout: 1000,
+     xsrfCookieName: 'XSRF-TOKEN',
+     xsrfHeaderName: 'X-XSRF-TOKEN',
+     maxContentLength: -1,
+     validateStatus: [Function: validateStatus],
+     headers: 
+      { Accept: 'application/json, text/plain, */*',
+        Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IlFEQXl2QSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6ImtleXBhcmstYmFja2VuZCIsImlhdCI6MTUzMTIxMDM2OSwiZXhwIjoxNTMyNDE5OTY5LCJ1c2VyX2lkIjoiREUzRldpWnpOWVBoaWVWdGFROVBaeVVrblNCMyIsImVtYWlsIjoidGVzdEB3cC5wbCIsInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInZlcmlmaWVkIjpmYWxzZX0.AdoDNjDxEbU4rX8Fy1sm7is1C-f6lxZ-eZFq-So0y8cELYuvwormW_OUQX1xyDGuW6rfd0PHca_WsbYYMtiyk7eeUyDQELMIXyQ1HP84R2AVNFKsLWhhTpUD9HKmN8XLZeLBXex4L6vU48IzSnYVMJNxDrnhC7JJwt_H87NvmPBlodgcK5MbgY3qoH_VH3RSC1qs5O0jCkOpLTccRyIUsFb7f3UUiB5PHocecEwQrjw_FCGxisyHIqcHYrZiIrgkx3i1k7lz4oP3hlfMjRnYLPIUe5m7rmdmQmsvCDbctQfd2Mbcz92-3ZjQ77AANfMggSrdcwiDnE4oN_g_hd2hsA',
+        'User-Agent': 'axios/0.18.0' },
+     method: 'get',
+     url: 'https://firestore.googleapis.com/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields',
+     data: undefined },
+  code: 'ECONNABORTED',
+  request: 
+   Writable {
+     _writableState: 
+      WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        corked: 0,
+        sync: true,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: null,
+        writelen: 0,
+        bufferedRequest: null,
+        lastBufferedRequest: null,
+        pendingcb: 0,
+        prefinished: false,
+        errorEmitted: false,
+        bufferedRequestCount: 0,
+        corkedRequestsFree: [Object] },
+     writable: true,
+     domain: null,
+     _events: 
+      { response: [Function: handleResponse],
+        error: [Function: handleRequestError] },
+     _eventsCount: 2,
+     _maxListeners: undefined,
+     _options: 
+      { protocol: 'https:',
+        maxRedirects: 21,
+        maxBodyLength: 10485760,
+        path: '/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields',
+        method: 'get',
+        headers: [Object],
+        agent: undefined,
+        auth: undefined,
+        hostname: 'firestore.googleapis.com',
+        port: null,
+        nativeProtocols: [Object],
+        pathname: '/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3',
+        search: '?fields=fields' },
+     _redirectCount: 0,
+     _redirects: [],
+     _requestBodyLength: 0,
+     _requestBodyBuffers: [],
+     _onNativeResponse: [Function],
+     _currentRequest: 
+      ClientRequest {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 6,
+        _maxListeners: undefined,
+        output: [],
+        outputEncodings: [],
+        outputCallbacks: [],
+        outputSize: 0,
+        writable: true,
+        _last: true,
+        upgrading: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: false,
+        useChunkedEncodingByDefault: false,
+        sendDate: false,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        _contentLength: 0,
+        _hasBody: true,
+        _trailer: '',
+        finished: true,
+        _headerSent: true,
+        socket: [TLSSocket],
+        connection: [TLSSocket],
+        _header: 'GET /v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nAuthorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IlFEQXl2QSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6ImtleXBhcmstYmFja2VuZCIsImlhdCI6MTUzMTIxMDM2OSwiZXhwIjoxNTMyNDE5OTY5LCJ1c2VyX2lkIjoiREUzRldpWnpOWVBoaWVWdGFROVBaeVVrblNCMyIsImVtYWlsIjoidGVzdEB3cC5wbCIsInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInZlcmlmaWVkIjpmYWxzZX0.AdoDNjDxEbU4rX8Fy1sm7is1C-f6lxZ-eZFq-So0y8cELYuvwormW_OUQX1xyDGuW6rfd0PHca_WsbYYMtiyk7eeUyDQELMIXyQ1HP84R2AVNFKsLWhhTpUD9HKmN8XLZeLBXex4L6vU48IzSnYVMJNxDrnhC7JJwt_H87NvmPBlodgcK5MbgY3qoH_VH3RSC1qs5O0jCkOpLTccRyIUsFb7f3UUiB5PHocecEwQrjw_FCGxisyHIqcHYrZiIrgkx3i1k7lz4oP3hlfMjRnYLPIUe5m7rmdmQmsvCDbctQfd2Mbcz92-3ZjQ77AANfMggSrdcwiDnE4oN_g_hd2hsA\r\nUser-Agent: axios/0.18.0\r\nHost: firestore.googleapis.com\r\nConnection: close\r\n\r\n',
+        _onPendingData: [Function: noopPendingOutput],
+        agent: [Agent],
+        socketPath: undefined,
+        timeout: undefined,
+        method: 'GET',
+        path: '/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields',
+        _ended: false,
+        res: null,
+        aborted: 1531210370716,
+        timeoutCb: null,
+        upgradeOrConnect: false,
+        parser: [HTTPParser],
+        maxHeadersCount: null,
+        _redirectable: [Circular],
+        [Symbol(outHeadersKey)]: [Object] },
+     _currentUrl: 'https://firestore.googleapis.com/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields' },
+  response: undefined }
+2018-07-10T08:12:50.728Z - info: Execution took 1512 ms, user function completed successfully
+2018-07-10T08:15:34.054Z - info: Worker for test closed due to file changes.
+2018-07-10T08:16:00.329Z - info: User function triggered, starting execution
+2018-07-10T08:16:01.901Z - info: user { Error: timeout of 1000ms exceeded
+    at createError (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/core/createError.js:16:15)
+    at Timeout.handleRequestTimeout [as _onTimeout] (/Users/ryrz01/Documents/keypark/keypark-backend/functions/node_modules/axios/lib/adapters/http.js:216:16)
+    at ontimeout (timers.js:458:11)
+    at tryOnTimeout (timers.js:296:5)
+    at Timer.listOnTimeout (timers.js:259:5)
+  config: 
+   { adapter: [Function: httpAdapter],
+     transformRequest: { '0': [Function: transformRequest] },
+     transformResponse: { '0': [Function: transformResponse] },
+     timeout: 1000,
+     xsrfCookieName: 'XSRF-TOKEN',
+     xsrfHeaderName: 'X-XSRF-TOKEN',
+     maxContentLength: -1,
+     validateStatus: [Function: validateStatus],
+     headers: 
+      { Accept: 'application/json, text/plain, */*',
+        Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IlFEQXl2QSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6ImtleXBhcmstYmFja2VuZCIsImlhdCI6MTUzMTIxMDU2MCwiZXhwIjoxNTMyNDIwMTYwLCJ1c2VyX2lkIjoiREUzRldpWnpOWVBoaWVWdGFROVBaeVVrblNCMyIsImVtYWlsIjoidGVzdEB3cC5wbCIsInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInZlcmlmaWVkIjpmYWxzZX0.aKs7OK22p0bFQNB-wYx5BmWC_699lyKJTGAfzJ2-U_AlQP8i1axckcdyDgA8-u0NqFAexqb8lCgRJ9TacGVaux44UxMKKFq74KfFPCxqYlQ4rQ_mQz7HAm8lchPL3EGRuz7MG0nn-7opQ5iKN4bSIiFthG-Wq7FZE1GJsSecn3wMgKYMh7vvIZzPsipp3GInthT6E4s12ASakhsC6x-iJIYuiV4FQX7aGJuOlDRVzUfYUCZM3KfAHxkboAm6PVMxujrJf7frR8ggl6sHmXp7PnIgu8hrDPv3WaS9RFiYmVyMKjSSmBDXAH5Z1IVmIIQKTfzJChGQHtbmfX9GW3RUHg',
+        'User-Agent': 'axios/0.18.0' },
+     method: 'get',
+     url: 'https://firestore.googleapis.com/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields',
+     data: undefined },
+  code: 'ECONNABORTED',
+  request: 
+   Writable {
+     _writableState: 
+      WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        corked: 0,
+        sync: true,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: null,
+        writelen: 0,
+        bufferedRequest: null,
+        lastBufferedRequest: null,
+        pendingcb: 0,
+        prefinished: false,
+        errorEmitted: false,
+        bufferedRequestCount: 0,
+        corkedRequestsFree: [Object] },
+     writable: true,
+     domain: null,
+     _events: 
+      { response: [Function: handleResponse],
+        error: [Function: handleRequestError] },
+     _eventsCount: 2,
+     _maxListeners: undefined,
+     _options: 
+      { protocol: 'https:',
+        maxRedirects: 21,
+        maxBodyLength: 10485760,
+        path: '/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields',
+        method: 'get',
+        headers: [Object],
+        agent: undefined,
+        auth: undefined,
+        hostname: 'firestore.googleapis.com',
+        port: null,
+        nativeProtocols: [Object],
+        pathname: '/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3',
+        search: '?fields=fields' },
+     _redirectCount: 0,
+     _redirects: [],
+     _requestBodyLength: 0,
+     _requestBodyBuffers: [],
+     _onNativeResponse: [Function],
+     _currentRequest: 
+      ClientRequest {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 6,
+        _maxListeners: undefined,
+        output: [],
+        outputEncodings: [],
+        outputCallbacks: [],
+        outputSize: 0,
+        writable: true,
+        _last: true,
+        upgrading: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: false,
+        useChunkedEncodingByDefault: false,
+        sendDate: false,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        _contentLength: 0,
+        _hasBody: true,
+        _trailer: '',
+        finished: true,
+        _headerSent: true,
+        socket: [TLSSocket],
+        connection: [TLSSocket],
+        _header: 'GET /v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nAuthorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IlFEQXl2QSJ9.eyJpc3MiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGUuY29tLyIsImF1ZCI6ImtleXBhcmstYmFja2VuZCIsImlhdCI6MTUzMTIxMDU2MCwiZXhwIjoxNTMyNDIwMTYwLCJ1c2VyX2lkIjoiREUzRldpWnpOWVBoaWVWdGFROVBaeVVrblNCMyIsImVtYWlsIjoidGVzdEB3cC5wbCIsInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCIsInZlcmlmaWVkIjpmYWxzZX0.aKs7OK22p0bFQNB-wYx5BmWC_699lyKJTGAfzJ2-U_AlQP8i1axckcdyDgA8-u0NqFAexqb8lCgRJ9TacGVaux44UxMKKFq74KfFPCxqYlQ4rQ_mQz7HAm8lchPL3EGRuz7MG0nn-7opQ5iKN4bSIiFthG-Wq7FZE1GJsSecn3wMgKYMh7vvIZzPsipp3GInthT6E4s12ASakhsC6x-iJIYuiV4FQX7aGJuOlDRVzUfYUCZM3KfAHxkboAm6PVMxujrJf7frR8ggl6sHmXp7PnIgu8hrDPv3WaS9RFiYmVyMKjSSmBDXAH5Z1IVmIIQKTfzJChGQHtbmfX9GW3RUHg\r\nUser-Agent: axios/0.18.0\r\nHost: firestore.googleapis.com\r\nConnection: close\r\n\r\n',
+        _onPendingData: [Function: noopPendingOutput],
+        agent: [Agent],
+        socketPath: undefined,
+        timeout: undefined,
+        method: 'GET',
+        path: '/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields',
+        _ended: false,
+        res: null,
+        aborted: 1531210561895,
+        timeoutCb: null,
+        upgradeOrConnect: false,
+        parser: [HTTPParser],
+        maxHeadersCount: null,
+        _redirectable: [Circular],
+        [Symbol(outHeadersKey)]: [Object] },
+     _currentUrl: 'https://firestore.googleapis.com/v1beta1/projects/keypark-backend/databases/(default)/documents/users/DE3FWiZzNYPhieVtaQ9PZyUknSB3?fields=fields' },
+  response: undefined }
+2018-07-10T08:16:01.905Z - error: Tue, 10 Jul 2018 08:16:01 GMT express deprecated res.send(status, body): Use res.status(status).send(body) instead at lib/test.js:38:33
+Tue, 10 Jul 2018 08:16:01 GMT express deprecated res.send(status, body): Use res.status(status).send(body) instead at lib/test.js:44:25
+(node:16979) UnhandledPromiseRejectionWarning: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: no auth
+    at ServerResponse.writeHead (_http_server.js:193:11)
+    at ServerResponse._implicitHeader (_http_server.js:184:8)
+    at write_ (_http_outgoing.js:641:9)
+    at ServerResponse.end (_http_outgoing.js:762:5)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:221:10)
+    at ServerResponse.json (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:158:21)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:44:25)
+    at Generator.throw (<anonymous>)
+    at rejected (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:4:65)
+(node:16979) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:16979) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-10T08:17:00.315Z - info: Execution took 60008 ms, finished with status: 'timeout'
+2018-07-10T08:17:00.323Z - info: Execution took 60016 ms, finished with status: 'crash'
+2018-07-10T08:17:00.323Z - error: Something went wrong with the function!
+2018-07-10T08:17:00.323Z - error:  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:267:15)
+    at ProxyServer.Supervisor._proxy.on (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/supervisor.js:107:14)
+    at ProxyServer.emit (/usr/local/lib/node_modules/firebase-tools/node_modules/eventemitter3/index.js:144:27)
+    at ClientRequest.proxyError (/usr/local/lib/node_modules/firebase-tools/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js:156:18)
+    at ClientRequest.emit (events.js:160:13)
+    at Socket.socketOnEnd (_http_client.js:423:9)
+2018-07-10T08:17:00.348Z - error: Function worker killed by signal: SIGTERM
+2018-07-10T08:19:05.447Z - info: User function triggered, starting execution
+2018-07-10T08:19:05.923Z - error: Tue, 10 Jul 2018 08:19:05 GMT express deprecated res.send(status, body): Use res.status(status).send(body) instead at lib/test.js:48:25
+2018-07-10T08:19:05.926Z - error: (node:17083) UnhandledPromiseRejectionWarning: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: no auth
+    at ServerResponse.writeHead (_http_server.js:193:11)
+    at ServerResponse._implicitHeader (_http_server.js:184:8)
+    at write_ (_http_outgoing.js:641:9)
+    at ServerResponse.end (_http_outgoing.js:762:5)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:221:10)
+    at ServerResponse.json (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:158:21)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:48:25)
+    at Generator.throw (<anonymous>)
+    at rejected (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:5:65)
+2018-07-10T08:19:05.926Z - error: (node:17083) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+(node:17083) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-10T08:20:05.416Z - info: Execution took 60003 ms, finished with status: 'timeout'
+2018-07-10T08:20:05.424Z - info: Execution took 60012 ms, finished with status: 'crash'
+2018-07-10T08:20:05.424Z - error: Something went wrong with the function!
+2018-07-10T08:20:05.424Z - error:  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:267:15)
+    at ProxyServer.Supervisor._proxy.on (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/supervisor/supervisor.js:107:14)
+    at ProxyServer.emit (/usr/local/lib/node_modules/firebase-tools/node_modules/eventemitter3/index.js:144:27)
+    at ClientRequest.proxyError (/usr/local/lib/node_modules/firebase-tools/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js:156:18)
+    at ClientRequest.emit (events.js:160:13)
+    at Socket.socketOnEnd (_http_client.js:423:9)
+2018-07-10T08:20:05.444Z - error: Function worker killed by signal: SIGTERM
+2018-07-10T08:22:13.781Z - info: User function triggered, starting execution
+2018-07-10T08:22:14.264Z - error: Tue, 10 Jul 2018 08:22:14 GMT express deprecated res.send(status, body): Use res.status(status).send(body) instead at lib/test.js:54:25
+2018-07-10T08:22:14.264Z - info: Execution took 485 ms, user function completed successfully
+2018-07-10T08:22:14.264Z - error: (node:17179) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:267:15)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:158:21)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:54:25)
+    at Generator.throw (<anonymous>)
+    at rejected (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:5:65)
+    at <anonymous>
+(node:17179) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+(node:17179) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-10T08:32:07.698Z - error: Function worker killed by signal: SIGTERM
+2018-07-10T12:48:35.532Z - info: User function triggered, starting execution
+2018-07-10T12:48:35.533Z - info: CheckIfUserIsAuthenitcated, Found "Authorization" header
+2018-07-10T12:48:35.537Z - info: decoded { iat: 1531230515 }
+2018-07-10T12:48:35.542Z - info: Execution took 12 ms, user function completed successfully
+2018-07-10T12:48:35.544Z - error: (node:25444) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:170:12)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:29:21)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:3:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+(node:25444) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:25444) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-10T12:49:07.068Z - info: User function triggered, starting execution
+2018-07-10T12:49:07.068Z - info: CheckIfUserIsAuthenitcated, Found "Authorization" header
+2018-07-10T12:49:07.068Z - info: decoded { iat: 1531230547 }
+2018-07-10T12:49:07.070Z - info: Execution took 2 ms, user function completed successfully
+2018-07-10T12:49:07.071Z - error: (node:25444) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:170:12)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:29:21)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:3:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+(node:25444) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-10T12:49:10.659Z - info: User function triggered, starting execution
+2018-07-10T12:49:10.659Z - info: CheckIfUserIsAuthenitcated, Found "Authorization" header
+2018-07-10T12:49:10.660Z - info: decoded { iat: 1531230550 }
+Execution took 1 ms, user function completed successfully
+2018-07-10T12:49:10.661Z - error: (node:25444) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:170:12)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:29:21)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:3:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+(node:25444) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+2018-07-10T12:49:13.685Z - info: User function triggered, starting execution
+2018-07-10T12:49:13.686Z - info: CheckIfUserIsAuthenitcated, Found "Authorization" header
+2018-07-10T12:49:13.686Z - info: decoded { iat: 1531230553 }
+2018-07-10T12:49:13.686Z - info: Execution took 1 ms, user function completed successfully
+2018-07-10T12:49:13.687Z - error: (node:25444) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:170:12)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:29:21)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:3:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+(node:25444) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+2018-07-10T12:49:58.747Z - info: Worker for test closed due to file changes.
+2018-07-10T12:49:58.791Z - error: Function worker killed by signal: SIGTERM
+2018-07-10T12:54:04.850Z - info: User function triggered, starting execution
+2018-07-10T12:54:04.852Z - info: CheckIfUserIsAuthenitcated, Found "Authorization" header
+decoded undefined
+2018-07-10T12:54:04.856Z - info: Execution took 8 ms, user function completed successfully
+2018-07-10T12:54:04.857Z - error: (node:25662) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.contentType (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:595:15)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:145:14)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:42:21)
+    at Generator.next (<anonymous>)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:22:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:18:12)
+2018-07-10T12:54:04.857Z - error: (node:25662) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:25662) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-10T12:55:06.159Z - info: User function triggered, starting execution
+2018-07-10T12:55:06.159Z - info: CheckIfUserIsAuthenitcated, Found "Authorization" header
+decoded undefined
+2018-07-10T12:55:06.161Z - info: Execution took 1 ms, user function completed successfully
+2018-07-10T12:55:06.162Z - error: (node:25662) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.contentType (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:595:15)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:145:14)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:42:21)
+    at Generator.next (<anonymous>)
+    at /Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:22:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:18:12)
+(node:25662) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+2018-07-10T12:55:33.975Z - info: Worker for test closed due to file changes.
+2018-07-10T12:55:34.001Z - error: Function worker killed by signal: SIGTERM
+2018-07-10T12:56:46.306Z - info: User function triggered, starting execution
+2018-07-10T12:56:46.308Z - info: CheckIfUserIsAuthenitcated, Found "Authorization" header
+2018-07-10T12:56:46.314Z - info: decoded undefined
+2018-07-10T12:56:46.314Z - info: Execution took 9 ms, user function completed successfully
+2018-07-10T12:56:46.316Z - error: (node:25751) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:170:12)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:45:21)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:19:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+2018-07-10T12:56:46.316Z - error: (node:25751) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:25751) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-10T12:57:20.454Z - info: Worker for test closed due to file changes.
+2018-07-10T12:57:20.491Z - error: Function worker killed by signal: SIGTERM
+2018-07-10T12:57:45.851Z - info: User function triggered, starting execution
+2018-07-10T12:57:45.852Z - info: CheckIfUserIsAuthenitcated, Found "Authorization" header
+2018-07-10T12:57:45.855Z - info: decoded { uid: 'B3tqod284iQgGkUkyDSm9TJp5BC3', iat: 1531230791 }
+2018-07-10T12:57:45.863Z - info: Execution took 13 ms, user function completed successfully
+2018-07-10T12:57:45.868Z - error: (node:25795) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at validateHeader (_http_outgoing.js:500:11)
+    at ServerResponse.setHeader (_http_outgoing.js:507:3)
+    at ServerResponse.header (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:767:10)
+    at ServerResponse.send (/usr/local/lib/node_modules/firebase-tools/node_modules/express/lib/response.js:170:12)
+    at Object.<anonymous> (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:45:21)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ryrz01/Documents/keypark/keypark-backend/functions/lib/test.js:19:58)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:160:7)
+(node:25795) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:25795) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+2018-07-10T12:59:36.413Z - info: Worker for test closed due to file changes.
+2018-07-10T12:59:36.446Z - error: Function worker killed by signal: SIGTERM

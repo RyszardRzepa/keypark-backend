@@ -81,9 +81,9 @@ module.exports = function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const isAuth = yield CheckIfUserIsAuthenitcated_1.default(req);
         if (!isAuth.auth) {
-            res.status(200).send('You are not unauthorized, to open this lock');
+            res.status(401).send('You are not unauthorized, to open this lock');
             console.log('UpdateDevice config Unauthorized, to open lock');
-            return null;
+            return;
         }
         const deviceId = req.query.deviceId;
         const ledState = req.query.ledStatus;
