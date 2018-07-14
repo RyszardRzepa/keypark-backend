@@ -2,7 +2,7 @@ const l = require('lodash');
 const findObjectDiff = require('./utils/findObjectDiff');
 import api from './GlobalVariables';
 
-const twilio = require('./twilio');
+const twilio = require('./services/twilio');
 
 module.exports = async function (change, context) {
     const dataAfter = change.after.data();
@@ -24,17 +24,19 @@ module.exports = async function (change, context) {
                  Uzyj aplikacji mobilnej do odebrania zamowienia.
                  Link do aplikacji: https://keypark.page.link/phone`;
             if (user) {
-                await twilio.messages.create({
+                return twilio.messages.create({
                     body: orderDetails,
                     from: '+18577632916',
-                    to: '+4791911225'
+                    to: phoneNumber
                 }).catch(err => err)
-                // user exist send sms with the order details
-                return null;
             }
             // Dont need to create a new user. When they sign in first time it will create new user
             // send sms with orderDetials to newUser
-            return null;
+            return twilio.messages.create({
+                body: orderDetails,
+                from: '+18577632916',
+                to: phoneNumber
+            }).catch(err => err)
         } else {
             console.log(' noo diff', Object.keys(diff))
             return null;
