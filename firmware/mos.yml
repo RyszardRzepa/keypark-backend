@@ -56,11 +56,13 @@ libs:
   - origin: https://github.com/mongoose-os-libs/mjs
   - origin: https://github.com/mongoose-os-libs/mqtt
   - origin: https://github.com/mongoose-os-libs/gcp
+  - origin: https://github.com/mongoose-os-libs/sntp
   
 config_schema:
  - ["app", "o", {title: "Application custom settings"}]
  - ["app.update_url", "s", "", {title: "OTA update url"}]
  - ["app.update_timeout", "i", 0, {title: "Timeout value for commit"}]
+ - ["app.firmware_version", "s", "1.00", {title: "Version of firmware"}]
  - ["app.ledState", "i", 0, {title: "on/off value of LED"}]
   
  - ["wifi.ap.ssid", "s", "DEVICE_SSID", {title : "Device SSID"}]

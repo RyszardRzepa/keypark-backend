@@ -1,20 +1,16 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+import api from './GlobalVariables';
 
-const {GoogleApis} = require('googleapis');
-const googleapis = new GoogleApis();
-var cloudiot = googleapis.cloudiot('v1');
+const cloudiot = api.googleapis.cloudiot('v1');
 
-admin.initializeApp(functions.config().firebase);
-const db = admin.firestore();
+const PROJECT_ID = 'keypark-backend';
+const REGION = 'europe-west1';
+const REGISTRY = 'asset-tracker-registry';
 
-const PROJECT_ID = process.env.GCLOUD_PROJECT;
-const REGION = 'us-central1';
-const REGISTRY = 'esp32-registry';
 const API_SCOPES = ['https://www.googleapis.com/auth/cloud-platform'];
 
 var updateUrl = "";
 var timeout = 0;
+var firmwareVersion = "";
 
 function handleBatchGet(authClient, name, err, data) {
     
@@ -27,7 +23,8 @@ function handleBatchGet(authClient, name, err, data) {
 	const newConfig = { 
 		heading: "update",
 		update_url: updateUrl,
-		update_timeout: timeout
+		update_timeout: timeout,
+		firmware_ver: firmwareVersion
 	};
 	
     const configData = new Buffer(JSON.stringify(newConfig), 'utf-8');
@@ -68,7 +65,7 @@ function handleBatchAuth(err, authClient) {
             API_SCOPES);
     }
 	
-	var deivesRef = db.collection('devices');
+	var deivesRef = db.collection('locks');
 	var devices = deivesRef.get()
     .then(snapshot => {
       snapshot.forEach(doc => {
@@ -99,20 +96,30 @@ function handleBatchAuth(err, authClient) {
  * stored in the database. It uses the updateDeviceConfig method
  * to trigger a firmware update.
  */
-module.exports = function (url, time) {
+module.exports = function (req, res) {
+  
+  const url = req.query.url;
+  const commitTimeout = req.query.time;
+  const version = req.query.ver;
 
-  console.log(updateURL);
-  if (updateURL === null) {
-    return Error( 'Param `url` is required!');
+  if (url === null) {
+    return null;
+	//return Error( 'Param `url` is required!');
   }
 
-  console.log(time);
-  if (time === null) {
-    return Error( 'Param `commitTimeout` is required!');
+  if (commitTimeout === null) {
+	return null;
+    //return Error( 'Param `commitTimeout` is required!');
+  }
+
+  if (version === null) {
+	return null;
+    //return Error( 'Param `version` is required!');
   }
 
   updateUrl = url;
-  timeout = time;
+  timeout = commitTimeout;
+  firmwareVersion = version;
 
-  return googleapis.auth.getApplicationDefault(handleAuth);
+  return api.googleapis.auth.getApplicationDefault(handleAuth);
 };

@@ -15,6 +15,7 @@ let led = 4;
 let button = 0;
 let ledIsOn = false;
 let isMqqtConnected = false;
+const firmwareVersion = Cfg.get('app.firmware_version');
 
 //let first_boot_flag = ffi('bool mgos_upd_is_first_boot(void)')();//TODO: Figure out why flag is not set
 let first_boot_flag = true; 
@@ -24,7 +25,6 @@ let topic = '/devices/' + deviceName + '/events';
 let configTopic = '/devices/' + deviceName + '/config';
 
 GPIO.set_mode(led, GPIO.MODE_OUTPUT);
-
 GPIO.write(led, 0); // Turn off led
 
 function getLedState(){
@@ -35,14 +35,16 @@ function turnOnLed(){
 	print("turning on led...")
 	ledIsOn = true;
 	GPIO.write(led,ON);
-	publishData();
+	let message = getInfo();
+	publishData(message);
 }
 
 function turnOffLed(){
 	print("turning off led...")
 	ledIsOn = false;
 	GPIO.write(led,OFF);
-	publishData();
+	let message = getInfo();
+	publishData(message);
 }
 
 let getInfo = function() {
@@ -55,7 +57,7 @@ let getInfo = function() {
 function updateDeviceState(){
 
 	let status = Cfg.get('app.ledState');
-	if(status === "1"){ // if message is on
+	if(status === "1"){ // ON
 		turnOnLed();
 	}
 	else if(status === "0"){ // OFF
@@ -68,8 +70,8 @@ function updateDeviceState(){
 
 function firmwareUpdate(){
 	print('updating firmware...');
-	let url = "https://dash.mongoose-os.com/api/v1/ota/github_africanwizz/demo-js-esp32.zip";//Cfg.get('app.update_url');
-	let timeout = 300;// Cfg.get('app.update_timeout');
+	let url = Cfg.get('app.update_url');
+	let timeout = Cfg.get('app.update_timeout');
 	
 	RPC.call(RPC.LOCAL,'OTA.Update',{"url": url, "commit_timeout": timeout},
 	function (resp, ud) {
@@ -78,13 +80,13 @@ function firmwareUpdate(){
 }
 
 function firmwareCommit(){
+	print('Commiting firmware...');
 	RPC.call(RPC.LOCAL,'OTA.Commit',null,function (resp, ud) {
 		print('Response:', JSON.stringify(resp));
 	}, null);
 }
 
-function publishData() {
-  let message = getInfo();
+function publishData(message) {
   let ok = MQTT.pub(topic, message);
   
   print('Published:', ok, topic, '->', message);
@@ -119,8 +121,11 @@ MQTT.sub(
     if (obj) {
 	  Cfg.set({ app: obj });// update and save all values
 	  if (obj.heading === "update"){
-		//firmware is available, update.
-		firmwareUpdate();
+			//update is available, check if firmware update is different from installed version
+			if(obj.firmware_ver !== firmwareVersion){
+				//update.
+				firmwareUpdate();
+			}
 		}
 	  if(obj.heading === "commit"){
 		//update is approved, commit.
@@ -146,7 +151,7 @@ MQTT.setEventHandler(function(conn, ev) {
 			print('First Boot,Commit software');
 			publishData(JSON.stringify({
 					deviceId: deviceName,
-					updated: true
+					firmware: firmwareVersion
 				})
 			);
 			first_boot_flag = false;

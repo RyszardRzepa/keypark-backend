@@ -9,7 +9,7 @@ const REGISTRY = 'asset-tracker-registry';
 const API_SCOPES = ['https://www.googleapis.com/auth/cloud-platform'];
 
 let deviceID = "0";
-let deviceState = "0";
+let message = "0";
 
 async function handleDeviceGet(authClient, name, device_id, err, data) {
 
@@ -18,8 +18,7 @@ async function handleDeviceGet(authClient, name, device_id, err, data) {
         return null;
     }
 
-    const newConfig = {ledState: deviceState};
-    const mydata = new Buffer(JSON.stringify(newConfig), 'utf-8');
+    const mydata = new Buffer(JSON.stringify(message), 'utf-8');
     const binaryData = mydata.toString('base64');
     console.log('in handleDeviceGet, after binaryData')
     const request2 = {
@@ -74,15 +73,15 @@ async function handleAuth(authError, authClient) {
  * call modifyCloudToDeviceConfig method of Cloud IoT Core
  * to update the device configuration.
  */
-module.exports = async function (deviceId, ledState) {
+module.exports = async function (deviceId, msg) {
     if (deviceId === null) {
         return null
     }
-    if (ledState === null) {
+    if (msg === null) {
         return null
     }
 
-    deviceState = ledState;
+    message = msg;
     deviceID = deviceId;
 
     return api.googleapis.auth.getApplicationDefault(handleAuth);
